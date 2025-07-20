@@ -2,7 +2,7 @@
 🔍 It's a repository of Observability from scratch.
 
 # OpMon
-<img src="https://github.com/user-attachments/assets/719e67fe-2882-447e-9e45-bda77564fcc3" align="right" height="77">
+<img src="https://github.com/user-attachments/assets/719e67fe-2882-447e-9e45-bda77564fcc3" align="right" height="177">
 
 O **OpMon** é uma plataforma brasileira de monitoramento de infraestrutura de TI, redes, servidores, serviços, aplicações e negócios, desenvolvida com o objetivo de proporcionar visibilidade completa e em tempo real sobre os ativos tecnológicos de uma organização. Ele se baseia em conceitos como observabilidade, automação e análise proativa de falhas para oferecer um ambiente de monitoramento robusto, permitindo que as equipes de tecnologia antecipem problemas, identifiquem gargalos e tomem decisões com mais agilidade e segurança.
 
