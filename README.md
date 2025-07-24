@@ -13,6 +13,15 @@
 
 # Grafana Stack
 
+# Typesense
+**Typesense** é um mecanismo de busca de código aberto, criado para oferecer uma alternativa moderna, rápida e fácil de usar em comparação com ferramentas mais complexas como Elasticsearch e Solr. Ele é projetado com foco na simplicidade e na performance, tornando-se ideal para desenvolvedores que desejam implementar funcionalidades de busca com qualidade, sem precisar configurar ou manter uma infraestrutura muito pesada. O Typesense é escrito em C++ e otimizado para oferecer tempos de resposta muito baixos, mesmo com grandes volumes de dados. A ideia central é facilitar a indexação e a consulta de dados estruturados, como registros de produtos, usuários, artigos ou qualquer outro conjunto de documentos que possa se beneficiar de busca textual eficiente.
+
+O grande diferencial do Typesense é sua abordagem voltada para o desenvolvedor. Sua API é simples, baseada em REST, com opções modernas de integração que funcionam bem em back-ends e também diretamente em front-ends. Ele oferece recursos como tolerância a erros de digitação (fuzzy search), autocompletar, ordenação por relevância e por campos personalizados, filtros facetas, e indexação em tempo real, o que permite que os dados atualizados sejam quase imediatamente refletidos nos resultados de busca. Isso é especialmente útil em sistemas de e-commerce, catálogos, dashboards administrativos ou portais de notícias.
+
+O Typesense pode ser usado localmente ou como serviço em nuvem, através do Typesense Cloud, que elimina a necessidade de configuração manual de servidores. Ele foi criado para consumir poucos recursos e ainda assim fornecer desempenho de nível profissional. A instalação e a configuração são diretas: é possível ter um cluster funcional em minutos. Ele também oferece SDKs e bibliotecas para diversas linguagens como JavaScript, Python, Ruby e outros, facilitando ainda mais sua adoção em projetos variados. Além disso, a estrutura de indexação dele é baseada em esquemas simples, o que ajuda a manter a clareza dos dados e evitar erros durante a indexação ou consulta.
+
+Em um cenário onde a busca é uma funcionalidade crítica — seja para melhorar a experiência do usuário final, seja para oferecer relatórios ou filtros poderosos — o Typesense surge como uma solução eficiente, moderna e acessível, com uma curva de aprendizado muito menor que seus concorrentes tradicionais, sem abrir mão de funcionalidades robustas e performance de alto nível.
+
 # OpMon
 <img src="https://github.com/user-attachments/assets/719e67fe-2882-447e-9e45-bda77564fcc3" align="right" height="177">
 
