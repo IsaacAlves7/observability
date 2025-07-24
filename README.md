@@ -1,6 +1,18 @@
 # observability
 🔍 It's a repository of Observability from scratch.
 
+# Zabbix
+
+# New Relic
+
+# UptimeRobot
+
+# Datadog
+
+# Elastic Stack
+
+# Grafana Stack
+
 # OpMon
 <img src="https://github.com/user-attachments/assets/719e67fe-2882-447e-9e45-bda77564fcc3" align="right" height="177">
 
