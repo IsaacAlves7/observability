@@ -14,6 +14,8 @@
 # Grafana Stack
 
 # Typesense
+<a href="https://typesense.org/"><img src="https://github.com/user-attachments/assets/c1fd54a2-4353-4067-8844-4802542e59f2" align="right" height="77"></a>
+
 **Typesense** é um mecanismo de busca de código aberto, criado para oferecer uma alternativa moderna, rápida e fácil de usar em comparação com ferramentas mais complexas como Elasticsearch e Solr. Ele é projetado com foco na simplicidade e na performance, tornando-se ideal para desenvolvedores que desejam implementar funcionalidades de busca com qualidade, sem precisar configurar ou manter uma infraestrutura muito pesada. O Typesense é escrito em C++ e otimizado para oferecer tempos de resposta muito baixos, mesmo com grandes volumes de dados. A ideia central é facilitar a indexação e a consulta de dados estruturados, como registros de produtos, usuários, artigos ou qualquer outro conjunto de documentos que possa se beneficiar de busca textual eficiente.
 
 O grande diferencial do Typesense é sua abordagem voltada para o desenvolvedor. Sua API é simples, baseada em REST, com opções modernas de integração que funcionam bem em back-ends e também diretamente em front-ends. Ele oferece recursos como tolerância a erros de digitação (fuzzy search), autocompletar, ordenação por relevância e por campos personalizados, filtros facetas, e indexação em tempo real, o que permite que os dados atualizados sejam quase imediatamente refletidos nos resultados de busca. Isso é especialmente útil em sistemas de e-commerce, catálogos, dashboards administrativos ou portais de notícias.
