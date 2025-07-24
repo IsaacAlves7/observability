@@ -2,6 +2,15 @@
 🔍 It's a repository of Observability from scratch.
 
 # Zabbix
+<a href=""><img src="https://www.vectorlogo.zone/logos/zabbix/zabbix-ar21.svg" align="right" height="77"></a>
+
+**Zabbix** é uma plataforma de monitoramento de código aberto usada para acompanhar o desempenho e a disponibilidade de servidores, redes, aplicações, serviços em nuvem e outros componentes de infraestrutura de TI. Ele permite coletar, armazenar, analisar e visualizar métricas em tempo real, alertando administradores quando algo foge do comportamento esperado, como aumento de uso de CPU, queda de serviços, problemas de disco, falhas de conectividade ou qualquer outro evento que comprometa a operação de sistemas. Por ser altamente configurável e escalável, o Zabbix é amplamente utilizado por empresas de diversos tamanhos, desde pequenos negócios até grandes corporações e instituições públicas.
+
+A arquitetura do Zabbix é baseada em agentes instalados nos dispositivos a serem monitorados, que coletam os dados e enviam para o servidor Zabbix central. No entanto, ele também suporta coleta de dados sem agente, usando protocolos como SNMP, IPMI, SSH, Telnet, HTTP, entre outros, o que o torna extremamente flexível. Esses dados são armazenados em um banco de dados relacional (geralmente MySQL, PostgreSQL ou Oracle), permitindo análises históricas e geração de gráficos detalhados. O sistema de alertas é poderoso e pode ser integrado com e-mails, SMS, mensagens em aplicativos como Telegram, Slack ou via Webhook com qualquer sistema externo, permitindo ações automatizadas em resposta a incidentes.
+
+A interface web do Zabbix oferece dashboards personalizáveis, gráficos, mapas de rede, relatórios e outras ferramentas de visualização, ajudando as equipes de operações a entenderem rapidamente o que está acontecendo em seus sistemas. Um dos seus pontos fortes é a detecção proativa de problemas baseada em gatilhos definidos pelo usuário, com suporte a expressões condicionais e templates prontos para facilitar a configuração de novos hosts. Ele também permite a descoberta automática de novos dispositivos ou serviços, o que reduz o esforço manual e mantém o ambiente sempre atualizado. Tudo isso contribui para a observabilidade e resiliência da infraestrutura, tornando o Zabbix uma peça fundamental na estratégia de monitoramento de ambientes modernos.
+
+Além disso, o Zabbix é gratuito sob licença GPL, o que atrai a comunidade de software livre e permite personalizações sem custo de licença. No entanto, também existem serviços comerciais e suporte oferecidos pela empresa Zabbix SIA para empresas que desejam assistência profissional ou hospedagem gerenciada. O Zabbix é uma solução madura, ativa desde os anos 2000, com uma base sólida de usuários e ampla documentação. Em um mundo onde manter a disponibilidade e o desempenho dos sistemas é essencial para os negócios, o Zabbix se consolida como uma ferramenta completa e confiável para garantir que tudo esteja funcionando como deveria.
 
 # New Relic
 
