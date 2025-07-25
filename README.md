@@ -289,7 +289,7 @@ O OpenTelemetry está rapidamente se tornando o padrão de telemetria de observa
 
 ![image](https://github.com/user-attachments/assets/550b9c21-58cb-46e0-afa5-79a6abeef9f9)
 
-# Typesense
+# ⚡ Typesense
 <a href="https://typesense.org/"><img src="https://github.com/user-attachments/assets/c1fd54a2-4353-4067-8844-4802542e59f2" align="right" height="77"></a>
 
 **Typesense** é um mecanismo de busca de código aberto, criado para oferecer uma alternativa moderna, rápida e fácil de usar em comparação com ferramentas mais complexas como Elasticsearch e Solr. Ele é projetado com foco na simplicidade e na performance, tornando-se ideal para desenvolvedores que desejam implementar funcionalidades de busca com qualidade, sem precisar configurar ou manter uma infraestrutura muito pesada. 
@@ -302,7 +302,7 @@ O Typesense pode ser usado localmente ou como serviço em nuvem, através do Typ
 
 Em um cenário onde a busca é uma funcionalidade crítica — seja para melhorar a experiência do usuário final, seja para oferecer relatórios ou filtros poderosos — o Typesense surge como uma solução eficiente, moderna e acessível, com uma curva de aprendizado muito menor que seus concorrentes tradicionais, sem abrir mão de funcionalidades robustas e performance de alto nível.
 
-# OpMon
+# 🟠 OpMon
 <img src="https://github.com/user-attachments/assets/719e67fe-2882-447e-9e45-bda77564fcc3" align="right" height="177">
 
 O **OpMon** é uma plataforma brasileira de monitoramento de infraestrutura de TI, redes, servidores, serviços, aplicações e negócios, desenvolvida com o objetivo de proporcionar visibilidade completa e em tempo real sobre os ativos tecnológicos de uma organização. Ele se baseia em conceitos como observabilidade, automação e análise proativa de falhas para oferecer um ambiente de monitoramento robusto, permitindo que as equipes de tecnologia antecipem problemas, identifiquem gargalos e tomem decisões com mais agilidade e segurança.
