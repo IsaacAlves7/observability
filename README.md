@@ -257,7 +257,7 @@ O **Kibana** é a interface do usuário e a poderosa camada de visualização cu
 O **Elastic Beats**, muitas vezes chamado apenas de "Beats," é uma coleção de agentes leves de código aberto desenvolvidos pela Elastic. Cada agente Beat é projetado para uma tarefa específica, como coleta, envio e agregação de dados de diferentes fontes para o Elasticsearch ou para outras saídas, como sistemas de armazenamento ou visualização. Os Beats são projetados para serem simples de configurar, altamente eficientes e escaláveis.
 
 # Grafana Stack
-<img src="https://img.shields.io/badge/Grafana-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white"> <img src="https://img.shields.io/badge/Prometheus-25.3.2-E6522C?style=flat&logo=Prometheus&logoColor=white"> <img src="https://img.shields.io/badge/OpenTelemetry-25.3.2-gold?style=flat&logo=OpenTelemetry&logoColor=white"> 
+<img src="https://img.shields.io/badge/Grafana-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white"> <img src="https://img.shields.io/badge/Prometheus-25.3.2-E6522C?style=flat&logo=Prometheus&logoColor=white"> <img src="https://img.shields.io/badge/OpenTelemetry-25.3.2-gold?style=flat&logo=OpenTelemetry&logoColor=white">
 
 <img src="https://github.com/user-attachments/assets/952f9c0f-78dd-4f72-946c-c444ba38829f" align="right" height="77">
 
