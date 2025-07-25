@@ -85,7 +85,7 @@ Então, o que você faz para analisar esse erro? Você põe log na sua aplicaç�
 
 > Há muitos casos de aplicações onde são desenvolvidas sem haver nenhuma aplicação/registro de logs, o que é um absurdo, porque se houver alguma falha, a detecção dos erros será falha também.
 
-Então, você começa a profissionalizar mais esse cenário e utilizar bibliotecas de Logs ao invés de escrever em seus arquivos de texto, como:
+**Logging**: Então, você começa a profissionalizar mais esse cenário e utilizar bibliotecas de Logs ao invés de escrever em seus arquivos de texto, como:
 
 - <a href="">NLog</a>: é uma biblioteca para C-Sharp.
 
@@ -99,7 +99,7 @@ Então, você começa a profissionalizar mais esse cenário e utilizar bibliotec
 
 - <a href="">Graylog</a>: é uma plataforma de gerenciamento de logs de código aberto que ajuda na coleta, armazenamento, análise e visualização de registros de diferentes fontes. Ele oferece uma solução integrada para lidar com logs de várias fontes, permitindo que as equipes de operações e desenvolvimento monitorem e analisem informações cruciais dos sistemas.
 
-Pode ser que aconteça outros casos também, vamos supor que seu servidor vai ficar sem internet ou desligado ou ficar travado e você não vai estar tomando nenhum erro, mas os usuários não vão conseguir acessar, o que você pode fazer pra entender esse tipo de situação é utilizar um serviço de **health check** (checagem de saúde), ele pode não só ver se sua URL do site está em pé, mas também fazer uma consulta no banco. Veja as soluções abaixo:
+**Monitoring**: Pode ser que aconteça outros casos também, vamos supor que seu servidor vai ficar sem internet ou desligado ou ficar travado e você não vai estar tomando nenhum erro, mas os usuários não vão conseguir acessar, o que você pode fazer pra entender esse tipo de situação é utilizar um serviço de **health check** (checagem de saúde), ele pode não só ver se sua URL do site está em pé, mas também fazer uma consulta no banco. Veja as soluções abaixo:
 
 - <a href="">UptimeRobot</a>: é um serviço online grátis que monitora a disponibilidade e o desempenho de sites, servidores, serviços web e outros recursos online. Ele verifica regularmente os recursos cadastrados e notifica os usuários caso haja qualquer interrupção ou queda de disponibilidade.
 
