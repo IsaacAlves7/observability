@@ -259,6 +259,16 @@ O **Elastic Beats**, muitas vezes chamado apenas de "Beats," é uma coleção de
 # Grafana Stack
 <img src="https://img.shields.io/badge/Grafana-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white"> <img src="https://img.shields.io/badge/Prometheus-25.3.2-E6522C?style=flat&logo=Prometheus&logoColor=white"> <img src="https://img.shields.io/badge/OpenTelemetry-25.3.2-gold?style=flat&logo=OpenTelemetry&logoColor=white"> 
 
+<img src="https://github.com/user-attachments/assets/952f9c0f-78dd-4f72-946c-c444ba38829f" align="right" height="77">
+
+**OpenTelemetry (OTel)** é um framework de observabilidade open source com o qual as equipes de desenvolvimento podem gerar, processar e transmitir dados de telemetria em um formato unificado. Foi desenvolvido pela Cloud Native Computing Foundation (CNCF) para fornecer protocolos e ferramentas padronizados com o objetivo de coletar e rotear métricas, logs e traces para plataformas de monitoramento.
+
+O OpenTelemetry fornece SDKs, APIs e ferramentas com independência de fornecedor para que seus dados possam ser enviados para qualquer backend de observabilidade para análise.
+
+O OpenTelemetry está rapidamente se tornando o padrão de telemetria de observabilidade dominante em aplicações nativas da nuvem. A adoção do OpenTelemetry é considerada crítica para as organizações que querem estar preparadas para as demandas de dados do futuro sem estarem vinculadas a um fornecedor específico ou às limitações de suas tecnologias existentes.
+
+![image](https://github.com/user-attachments/assets/550b9c21-58cb-46e0-afa5-79a6abeef9f9)
+
 # Typesense
 <a href="https://typesense.org/"><img src="https://github.com/user-attachments/assets/c1fd54a2-4353-4067-8844-4802542e59f2" align="right" height="77"></a>
 
