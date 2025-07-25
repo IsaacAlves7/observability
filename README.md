@@ -3,7 +3,7 @@
 
 <img src="https://user-images.githubusercontent.com/61624336/172407209-627822a2-0a5f-4778-b58e-954481ee788b.gif" align="right" height="77">
 
-A **observabilidade** é um conceito fundamental em engenharia de sistemas e DevOps, que se refere à capacidade de entender o que está acontecendo dentro de um sistema complexo através da coleta, agregação e análise de seus dados de desempenho e operação. A ideia central é fornecer visibilidade e insights sobre o estado interno do sistema com base nas saídas externas. 
+A **observabilidade** (observability) é um conceito fundamental em engenharia de sistemas e DevOps, que se refere à capacidade de entender o que está acontecendo dentro de um sistema complexo através da coleta, agregação e análise de seus dados de desempenho e operação. A ideia central é fornecer visibilidade e insights sobre o estado interno do sistema com base nas saídas externas. 
 
 Observabilidade refere-se à capacidade de monitorar, mensurar e entender o estado de um sistema ou aplicação por meio da análise de seus resultados, logs e métricas de desempenho. Em sistemas de software modernos e na cloud computing, a observabilidade desempenha um papel de extrema importância, por garantir confiabilidade, desempenho e segurança a aplicações e a infraestrutura.
 
@@ -137,7 +137,9 @@ E qual a melhor plataforma para monitoramento e visualização de logs em aplica
 
 - Nagios: O Nagios é uma das ferramentas mais conhecidas e utilizadas para monitoramento de sistemas, redes e infraestrutura. Ele oferece recursos abrangentes para monitorar a disponibilidade de serviços, a integridade dos dispositivos, o desempenho de redes e outros aspectos críticos de sistemas de TI.
 
-# Zabbix
+# [Monitoring] Zabbix
+<img src="https://img.shields.io/badge/Grafana_Stack-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white">
+
 <a href=""><img src="https://www.vectorlogo.zone/logos/zabbix/zabbix-ar21.svg" align="right" height="77"></a>
 
 **Zabbix** é uma plataforma de monitoramento de código aberto usada para acompanhar o desempenho e a disponibilidade de servidores, redes, aplicações, serviços em nuvem e outros componentes de infraestrutura de TI. Ele permite coletar, armazenar, analisar e visualizar métricas em tempo real, alertando administradores quando algo foge do comportamento esperado, como aumento de uso de CPU, queda de serviços, problemas de disco, falhas de conectividade ou qualquer outro evento que comprometa a operação de sistemas. Por ser altamente configurável e escalável, o Zabbix é amplamente utilizado por empresas de diversos tamanhos, desde pequenos negócios até grandes corporações e instituições públicas.
@@ -148,7 +150,7 @@ A interface web do Zabbix oferece dashboards personalizáveis, gráficos, mapas 
 
 Além disso, o Zabbix é gratuito sob licença GPL, o que atrai a comunidade de software livre e permite personalizações sem custo de licença. No entanto, também existem serviços comerciais e suporte oferecidos pela empresa Zabbix SIA para empresas que desejam assistência profissional ou hospedagem gerenciada. O Zabbix é uma solução madura, ativa desde os anos 2000, com uma base sólida de usuários e ampla documentação. Em um mundo onde manter a disponibilidade e o desempenho dos sistemas é essencial para os negócios, o Zabbix se consolida como uma ferramenta completa e confiável para garantir que tudo esteja funcionando como deveria.
 
-# New Relic
+# [Monitoring] New Relic
 <a href=""><img src="" align="right" height="77"></a>
 
 **New Relic** é uma plataforma de observabilidade e monitoramento de desempenho de aplicações (APM — Application Performance Monitoring) que permite a desenvolvedores, engenheiros de software, operadores de infraestrutura e equipes de negócios acompanharem em tempo real o comportamento de seus sistemas digitais. Assim como o Datadog, ela centraliza uma ampla variedade de dados — como métricas, logs, rastreamentos distribuídos (traces), eventos e informações do navegador do usuário — para que os times possam diagnosticar problemas, melhorar a performance e tomar decisões baseadas em dados concretos. A filosofia do New Relic é oferecer uma visão unificada da saúde e do desempenho de toda a stack tecnológica, desde o frontend até os bancos de dados e serviços externos.
@@ -264,7 +266,7 @@ O **Kibana** é a interface do usuário e a poderosa camada de visualização cu
 
 O **Elastic Beats**, muitas vezes chamado apenas de "Beats," é uma coleção de agentes leves de código aberto desenvolvidos pela Elastic. Cada agente Beat é projetado para uma tarefa específica, como coleta, envio e agregação de dados de diferentes fontes para o Elasticsearch ou para outras saídas, como sistemas de armazenamento ou visualização. Os Beats são projetados para serem simples de configurar, altamente eficientes e escaláveis.
 
-# Grafana Stack
+# [Monitoring] Grafana Stack
 <img src="https://img.shields.io/badge/Grafana-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white"> <img src="https://img.shields.io/badge/Prometheus-25.3.2-E6522C?style=flat&logo=Prometheus&logoColor=white"> <img src="https://img.shields.io/badge/OpenTelemetry-25.3.2-gold?style=flat&logo=OpenTelemetry&logoColor=white">
 
 <img src="https://github.com/user-attachments/assets/952f9c0f-78dd-4f72-946c-c444ba38829f" align="right" height="77">
