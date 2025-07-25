@@ -137,7 +137,7 @@ E qual a melhor plataforma para monitoramento e visualização de logs em aplica
 
 - Nagios: O Nagios é uma das ferramentas mais conhecidas e utilizadas para monitoramento de sistemas, redes e infraestrutura. Ele oferece recursos abrangentes para monitorar a disponibilidade de serviços, a integridade dos dispositivos, o desempenho de redes e outros aspectos críticos de sistemas de TI.
 
-# [Monitoring] Zabbix
+# Zabbix
 <img src="https://img.shields.io/badge/Grafana_Stack-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white">
 
 <a href=""><img src="https://www.vectorlogo.zone/logos/zabbix/zabbix-ar21.svg" align="right" height="77"></a>
@@ -150,7 +150,7 @@ A interface web do Zabbix oferece dashboards personalizáveis, gráficos, mapas 
 
 Além disso, o Zabbix é gratuito sob licença GPL, o que atrai a comunidade de software livre e permite personalizações sem custo de licença. No entanto, também existem serviços comerciais e suporte oferecidos pela empresa Zabbix SIA para empresas que desejam assistência profissional ou hospedagem gerenciada. O Zabbix é uma solução madura, ativa desde os anos 2000, com uma base sólida de usuários e ampla documentação. Em um mundo onde manter a disponibilidade e o desempenho dos sistemas é essencial para os negócios, o Zabbix se consolida como uma ferramenta completa e confiável para garantir que tudo esteja funcionando como deveria.
 
-# [Monitoring] New Relic
+# New Relic
 <a href=""><img src="" align="right" height="77"></a>
 
 **New Relic** é uma plataforma de observabilidade e monitoramento de desempenho de aplicações (APM — Application Performance Monitoring) que permite a desenvolvedores, engenheiros de software, operadores de infraestrutura e equipes de negócios acompanharem em tempo real o comportamento de seus sistemas digitais. Assim como o Datadog, ela centraliza uma ampla variedade de dados — como métricas, logs, rastreamentos distribuídos (traces), eventos e informações do navegador do usuário — para que os times possam diagnosticar problemas, melhorar a performance e tomar decisões baseadas em dados concretos. A filosofia do New Relic é oferecer uma visão unificada da saúde e do desempenho de toda a stack tecnológica, desde o frontend até os bancos de dados e serviços externos.
@@ -163,7 +163,7 @@ A interface da ferramenta, chamada New Relic One, é baseada em uma abordagem "t
 
 Com o avanço da inteligência artificial e a crescente complexidade das aplicações modernas, ferramentas como o New Relic tornaram-se essenciais para dar visibilidade e controle sobre ambientes distribuídos e dinâmicos. Mais do que apenas um sistema de alerta, ele se posiciona como um verdadeiro copiloto técnico para times de engenharia, capaz de reduzir o tempo de resposta a incidentes e orientar melhorias contínuas com base em dados objetivos.
 
-# UptimeRobot
+# 🟢 UptimeRobot
 <a href=""><img src="" align="right" height="77"></a>
 
 **UptimeRobot** é um serviço online que tem como principal função monitorar a disponibilidade (uptime) e o tempo de resposta de websites, servidores e serviços web em geral. Ele realiza verificações periódicas — geralmente a cada cinco minutos, no plano gratuito, e em intervalos menores em planos pagos — para assegurar que o serviço monitorado esteja acessível e funcionando corretamente. Quando detecta uma falha, como um site fora do ar (downtime) ou um tempo de resposta excessivo, o UptimeRobot imediatamente envia alertas por e-mail, SMS, chamadas de voz, ou integrações como Slack, Telegram, Discord, Webhooks e outras plataformas, permitindo que os responsáveis tomem providências rápidas para corrigir o problema.
@@ -174,7 +174,7 @@ Além da sua simplicidade e facilidade de uso, o UptimeRobot também oferece das
 
 Empresas de todos os tamanhos usam o UptimeRobot como uma primeira camada de detecção de problemas, especialmente em sistemas que exigem alta disponibilidade, como e-commerces, APIs públicas, serviços financeiros e plataformas SaaS. Embora não ofereça a mesma profundidade de uma ferramenta de observabilidade como o New Relic ou o Datadog, o UptimeRobot é uma excelente escolha para monitoramento simples, direto e com baixo custo, sendo frequentemente usado em conjunto com outras ferramentas. Ele se tornou popular entre desenvolvedores independentes, startups e equipes de DevOps que precisam de alertas confiáveis sem a complexidade de configurar soluções mais robustas. Seu modelo freemium com plano gratuito atrai muitos usuários que desejam garantir que seus sistemas estejam sempre no ar, o que faz dele uma peça útil em qualquer stack de monitoramento.
 
-# Datadog
+# 🐶 Datadog
 <a href=""><img src="" align="right" height="77"></a>
 
 **Datadog** é uma plataforma de monitoramento e análise baseada na nuvem, projetada para fornecer visibilidade completa sobre a infraestrutura de TI, aplicações e serviços em execução em ambientes modernos, especialmente os que utilizam arquiteturas distribuídas, microserviços, contêineres e nuvens públicas ou híbridas. Seu objetivo é ajudar engenheiros, desenvolvedores, times de DevOps, SRE e segurança a observarem o comportamento de seus sistemas em tempo real, correlacionando métricas, logs, rastreamentos distribuídos e eventos em uma interface unificada e de fácil uso. Com isso, o Datadog permite detectar problemas de desempenho, gargalos, falhas ou comportamentos anômalos antes que impactem os usuários finais.
@@ -185,7 +185,7 @@ Outra camada que o Datadog oferece é o monitoramento de segurança e conformida
 
 O Datadog é um serviço comercial, baseado em planos por volume de dados e quantidade de hosts monitorados. Ele é muito valorizado por empresas que operam em larga escala, principalmente pelo fato de permitir que múltiplas equipes compartilhem contexto sem silos de informação. Também oferece uma API completa e SDKs em várias linguagens para customização, além de suporte a Infrastructure-as-Code para automatizar sua configuração via Terraform, CloudFormation, entre outros. Com uma interface polida, rica em visualizações, e uma comunidade ativa, o Datadog se posiciona como uma das soluções mais modernas e completas no campo de observabilidade, sendo amplamente adotado em startups, corporações globais e setores com alto nível de exigência tecnológica.
 
-# Elastic Stack
+# 🍨 Elastic Stack
 <img src="https://cdn.worldvectorlogo.com/logos/elastic.svg" height="77" align="right">
 
 A empresa Elastic ajuda as organizações, seus funcionários, e clientes a acelerarem os resultados que importam com soluções de busca, monitoramento, e segurança. A empresa fornece vários serviços com seus produtos, dentre eles, o mais famoso é o **Elastic Stack**, abreviado como **ELK Stack** que é uma pilha de software de código aberto usada para coletar, armazenar, pesquisar, visualizar e analisar dados de log e outros tipos de dados em tempo real. O nome "ELK" é um acrônimo que representa os três principais componentes da pilha: **E**lasticsearch, **L**ogstach e **K**ibana.
@@ -266,8 +266,18 @@ O **Kibana** é a interface do usuário e a poderosa camada de visualização cu
 
 O **Elastic Beats**, muitas vezes chamado apenas de "Beats," é uma coleção de agentes leves de código aberto desenvolvidos pela Elastic. Cada agente Beat é projetado para uma tarefa específica, como coleta, envio e agregação de dados de diferentes fontes para o Elasticsearch ou para outras saídas, como sistemas de armazenamento ou visualização. Os Beats são projetados para serem simples de configurar, altamente eficientes e escaláveis.
 
-# [Monitoring] Grafana Stack
+# ☀️ Grafana Stack
 <img src="https://img.shields.io/badge/Grafana-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white"> <img src="https://img.shields.io/badge/Prometheus-25.3.2-E6522C?style=flat&logo=Prometheus&logoColor=white"> <img src="https://img.shields.io/badge/OpenTelemetry-25.3.2-gold?style=flat&logo=OpenTelemetry&logoColor=white">
+
+<img src="https://cdn.worldvectorlogo.com/logos/grafana.svg" align="right" height="77">
+
+O **Grafana Stack** é um conjunto de ferramentas desenvolvidas e mantidas pela Grafana Labs com o objetivo de fornecer uma plataforma completa e integrada para observabilidade, ou seja, para o monitoramento, análise e visualização de dados de sistemas, aplicações, infraestrutura e serviços. Ele é muito utilizado por equipes de DevOps, SREs e engenheiros de software para entenderem como os sistemas estão se comportando em tempo real, detectar falhas, identificar gargalos e manter a confiabilidade dos ambientes em produção. A base desse stack é o Grafana, uma ferramenta open source de visualização de métricas, logs e traces que permite a criação de dashboards interativos altamente customizáveis.
+
+Dentro do Grafana Stack, há várias soluções que se complementam. O Grafana em si é a interface principal, onde os usuários constroem painéis e gráficos a partir de dados oriundos de diferentes fontes. Ele se conecta a bancos de dados de séries temporais como Prometheus, InfluxDB, Graphite e também a fontes de logs como Loki. O Loki, inclusive, é parte do stack e foi desenvolvido pela própria Grafana Labs para tratar logs de maneira semelhante ao Prometheus trata métricas: como séries temporais indexadas, porém com menor sobrecarga de processamento. Já o Prometheus, embora não seja originalmente criado pela Grafana Labs, é amplamente adotado e compatível com o stack, sendo responsável pela coleta de métricas de aplicações e sistemas, muitas vezes através de endpoints expostos pelas próprias aplicações (como o padrão /metrics).
+
+Além disso, o stack inclui o Tempo, que é uma ferramenta de rastreamento distribuído (distributed tracing). O Grafana Tempo permite visualizar e analisar traces de requisições em sistemas complexos, o que é essencial para diagnosticar problemas de performance, identificar latências entre serviços e entender o fluxo de chamadas em arquiteturas de microsserviços. Ele se integra com bibliotecas como OpenTelemetry e Jaeger, permitindo rastrear requisições de ponta a ponta. Com Loki, Prometheus e Tempo juntos, o Grafana Stack oferece uma solução chamada de “correlação de observabilidade”, onde o usuário consegue cruzar logs, métricas e traces em uma única interface, facilitando investigações e diminuindo o tempo de resposta a incidentes.
+
+O Grafana Stack também pode incluir o Grafana Agent, que é um componente leve para coleta de métricas, logs e traces, simplificando a instrumentação de aplicações e o envio dos dados para os demais componentes. Em ambientes maiores ou gerenciados, há ainda o Grafana Cloud, que oferece tudo isso como serviço, com escalabilidade e facilidades de gerenciamento. Com isso, o Grafana Stack se posiciona como uma alternativa completa para observabilidade, integrando coleta, armazenamento e visualização de dados em tempo real, com foco em flexibilidade, performance e comunidade ativa.
 
 <img src="https://github.com/user-attachments/assets/952f9c0f-78dd-4f72-946c-c444ba38829f" align="right" height="77">
 
