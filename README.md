@@ -176,6 +176,85 @@ Outra camada que o Datadog oferece é o monitoramento de segurança e conformida
 O Datadog é um serviço comercial, baseado em planos por volume de dados e quantidade de hosts monitorados. Ele é muito valorizado por empresas que operam em larga escala, principalmente pelo fato de permitir que múltiplas equipes compartilhem contexto sem silos de informação. Também oferece uma API completa e SDKs em várias linguagens para customização, além de suporte a Infrastructure-as-Code para automatizar sua configuração via Terraform, CloudFormation, entre outros. Com uma interface polida, rica em visualizações, e uma comunidade ativa, o Datadog se posiciona como uma das soluções mais modernas e completas no campo de observabilidade, sendo amplamente adotado em startups, corporações globais e setores com alto nível de exigência tecnológica.
 
 # Elastic Stack
+<img src="https://cdn.worldvectorlogo.com/logos/elastic.svg" height="77" align="right">
+
+A empresa Elastic ajuda as organizações, seus funcionários, e clientes a acelerarem os resultados que importam com soluções de busca, monitoramento, e segurança. A empresa fornece vários serviços com seus produtos, dentre eles, o mais famoso é o **Elastic Stack**, abreviado como **ELK Stack** que é uma pilha de software de código aberto usada para coletar, armazenar, pesquisar, visualizar e analisar dados de log e outros tipos de dados em tempo real. O nome "ELK" é um acrônimo que representa os três principais componentes da pilha: **E**lasticsearch, **L**ogstach e **K**ibana.
+
+Elastic Stack ou ELK Stack é um produto open-source designado para tratar e organizar grandes quantidades de dados em qualquer tipo de fonte e formato. Devido a sua alta capacidade de armazenamento na centralização de logs, esse recurso garante a análise e pesquisa de informações em tempo real.
+
+<img src="https://cdn.worldvectorlogo.com/logos/elastic-stack.svg" height="77" align="right">
+
+O ELK Stack é amplamente utilizado em operações de TI, monitoramento de sistemas e segurança da informação para coletar, analisar e visualizar logs e eventos de diversas fontes. É uma ferramenta poderosa para detectar problemas, solucionar problemas, monitorar o desempenho e a segurança de sistemas e aplicativos, e muito mais. Oferecendo diversos mecanismos de busca e análise, o processo de integrar e centralizar os logs em um único local nos ajuda a identificar diversos problemas com os nossos servidores e aplicações. Portanto, o Elastic Stack pode ser usado para monitorar tanto a aplicação quanto a infraestrutura em produção, oferecendo uma gama de ferramentas para coleta, armazenamento, análise e visualização de dados operacionais.
+
+Com a difusão, crescimento e expansão desses projetos, a comunidade inseriu um novo projeto para coleta de dados, conhecido como **Beats**. Deste modo, a ferramenta que era formada pelo acrônimo “ELK” não tinha mais sentido com os Beats, pois iria ficar uma sopa de letrinhas. Assim, surgiu o Elastic Stack que atualmente é mantido pela Elastic.
+
+<img src="https://user-images.githubusercontent.com/61624336/234415822-3c516b5b-9779-4c6a-bed3-78367f8b3be1.svg" height="77" align="right">
+
+O **Elasticsearch** é um mecanismo de busca rápido e ampliável que é o coração do Elastic Stack. O Elasticsearch é um mecanismo de busca e análise distribuída altamente escalável. Ele é projetado para indexar, armazenar e recuperar dados de forma eficiente, permitindo buscas rápidas e análises avançadas. O Elasticsearch é frequentemente usado como o mecanismo de armazenamento central para dados de log e outros tipos de dados. O **Index Lifecycle Management (ILM)** é um recurso oferecido pelo Elasticsearch, um mecanismo de busca e análise distribuída, que permite gerenciar o ciclo de vida dos índices de dados armazenados no Elasticsearch. É particularmente útil para a gestão de índices de log e outros tipos de dados que têm requisitos específicos de retenção, compactação e arquivamento ao longo do tempo.
+
+O ILM oferece as seguintes funcionalidades:
+
+- Definição de Políticas de Ciclo de Vida: Você pode definir políticas de ciclo de vida que especificam regras para a criação, retenção, compactação e arquivamento de índices. As políticas podem ser personalizadas para atender aos requisitos específicos do seu aplicativo.
+
+- Fases de Ciclo de Vida: As políticas de ciclo de vida normalmente têm várias fases, como "quente" (hot), "morno" (warm), "frio" (cold) e "congelado" (frozen), que representam diferentes estágios na vida de um índice. Por exemplo, índices recentes podem ser mantidos na fase "quente" para consultas em tempo real, enquanto índices mais antigos podem ser movidos para a fase "frio" para economizar recursos.
+
+- Transições Automáticas: O ILM permite que você configure regras para que os índices façam transições automáticas entre as fases com base em critérios predefinidos, como idade do índice ou tamanho total.
+
+- Ações de Gerenciamento: Você pode especificar ações a serem executadas em índices quando eles fazem transições de fase. Isso pode incluir a alocação de índices para diferentes nós do cluster, compactação, exclusão ou arquivamento.
+
+- Rastreamento de Histórico: O ILM registra um histórico das ações realizadas em índices, o que permite rastrear as mudanças de fase e entender o ciclo de vida de cada índice.
+
+- Integração com o Elasticsearch Stack: O ILM é integrado com outros componentes do Elasticsearch, como o Kibana (para visualização e gerenciamento) e a segurança do Elasticsearch (para controle de acesso).
+
+O ILM é uma ferramenta valiosa para ambientes que lidam com grandes volumes de dados, como logs de servidor, métricas de desempenho, eventos de segurança e muito mais. Ele ajuda a otimizar o uso de recursos de armazenamento e a simplificar a manutenção de índices, garantindo que os dados estejam disponíveis quando necessário e que sejam arquivados de forma eficiente quando não são mais necessários para consultas em tempo real.
+
+<img src="https://cdn.worldvectorlogo.com/logos/elastic-logstash.svg" height="77" align="right">
+
+O **Logstash** é um mecanismo de coleta, transformação e ingestão de dados. Ele permite que você colete dados de várias fontes, os transforme para um formato desejado e, em seguida, os encaminhe para o Elasticsearch ou para outros sistemas de armazenamento ou análise. O Logstash é especialmente útil para ingestão de logs de várias fontes, como servidores, aplicativos e dispositivos de rede.
+
+Com o passar do tempo muitas pessoas fizeram testes com o Elasticsearch, incluindo uma integração com os logs gerados pelos nossos servidores, aplicações ou sistemas. E como o Elasticsearch guarda muita informação, ele obviamente aguentaria os logs.
+
+Partindo desse princípio, eles reconheceram que as informações dos logs podiam ser tratadas um pouco antes, no meio do caminho, para que ficassem mais legíveis quando fossem integradas ao Elasticsearch. E a partir desse conceito foi criada uma ferramenta chamada Logstash, responsável pela intermediação entre as informações dos nossos logs antes de integrá-las ao Elasticsearch.
+
+Ou seja, quando um servidor web envia um axis log, seja um Apache, Nginx ou quando o seu PhP apresenta algum erro, essas informações são enviadas ao Logstash, que recebe os logs e aplica filtros para prepará-las da melhor forma possível antes dessa integração.
+
+Algumas características e funcionalidades do Logstash:
+
+- Coleta de dados: O Logstash pode coletar dados de uma ampla variedade de fontes, incluindo logs de aplicativos, eventos de sistemas, bancos de dados, feeds de dados, entre outros.
+
+- Transformação de dados: Ele permite que você transforme os dados brutos de log em um formato estruturado e enriqueça esses dados adicionando informações relevantes antes de armazená-los no Elasticsearch. Isso é especialmente útil para normalizar dados de várias fontes diferentes.
+
+- Suporte a plugins: O Logstash possui uma arquitetura de plugin que permite estender suas funcionalidades. Existem plugins disponíveis para várias entradas, filtros e saídas, tornando-o altamente configurável e adaptável a diferentes casos de uso.
+
+- Escalabilidade: O Logstash pode ser escalado horizontalmente para lidar com grandes volumes de dados. Você pode configurar clusters de Logstash para distribuir a carga de processamento.
+
+- Integração com o Elasticsearch: O Logstash é frequentemente usado em conjunto com o Elasticsearch e o Kibana para criar uma solução completa de análise de logs e eventos, onde os dados coletados são armazenados no Elasticsearch e visualizados usando o Kibana.
+
+<img src="https://cdn.worldvectorlogo.com/logos/elastic-kibana.svg" height="77" align="right">
+
+O **Kibana** é a interface do usuário e a poderosa camada de visualização customizável para o Elastic Stack. O Kibana é uma interface de usuário de código aberto que facilita a visualização e a análise de dados armazenados no Elasticsearch. Com o Kibana, você pode criar painéis interativos, gráficos, tabelas e painéis de controle personalizados para explorar dados, criar visualizações e obter insights em tempo real. É uma ferramenta poderosa para monitoramento e análise de dados de logs, métricas e eventos. Abaixo, vou explicar algumas das principais características e funcionalidades do Kibana:
+
+- Visualização de Dados: O Kibana oferece uma ampla variedade de opções para visualizar dados. Você pode criar gráficos de barras, gráficos de pizza, tabelas dinâmicas, gráficos de dispersão, mapas geográficos e muito mais. Essas visualizações ajudam a transformar dados brutos em informações facilmente compreensíveis.
+
+- Painéis de Controle: Com o Kibana, você pode criar painéis de controle personalizados que agregam várias visualizações e gráficos em uma única página. Isso é útil para monitorar o desempenho de aplicativos, sistemas ou serviços em tempo real.
+
+- Exploração de Dados Interativa: Os usuários podem explorar e filtrar dados interativamente, permitindo que investiguem eventos específicos e identifiquem tendências ou anomalias rapidamente.
+
+- Consulta e Pesquisa Avançadas: O Kibana possui uma poderosa linguagem de consulta chamada KQL (Kibana Query Language) que permite criar consultas complexas para recuperar dados específicos do Elasticsearch.
+
+- Integração com Elasticsearch: O Kibana é altamente integrado ao Elasticsearch, facilitando a configuração de painéis e visualizações para usar os dados armazenados no Elasticsearch. Os dados de log ou métricas coletados pelo Logstash ou outros meios podem ser facilmente acessados e visualizados no Kibana.
+
+- Segurança e Autenticação: O Kibana oferece recursos de segurança robustos, permitindo controlar o acesso dos usuários aos dados e às funcionalidades. Ele suporta autenticação de usuário, autorização baseada em funções e integração com sistemas de autenticação externa.
+
+- Personalização: Você pode personalizar a aparência e a experiência do usuário no Kibana, adaptando-o às necessidades específicas da sua organização. Isso inclui a criação de painéis de controle com temas personalizados e layouts específicos.
+
+- Programação de Alertas: O Kibana permite criar alertas com base em condições definidas, como eventos críticos ou métricas fora dos limites aceitáveis. Os alertas podem ser configurados para notificar automaticamente as equipes de operações ou administradores quando ocorrem eventos importantes.
+
+- Exportação e Compartilhamento: Você pode exportar visualizações, painéis e relatórios do Kibana em vários formatos, como PDF ou PNG. Além disso, é possível compartilhar links para painéis específicos com outros membros da equipe para colaboração e revisão.
+
+<img src="https://cdn.worldvectorlogo.com/logos/elastic-beats.svg" height="77" align="right">
+
+O **Elastic Beats**, muitas vezes chamado apenas de "Beats," é uma coleção de agentes leves de código aberto desenvolvidos pela Elastic. Cada agente Beat é projetado para uma tarefa específica, como coleta, envio e agregação de dados de diferentes fontes para o Elasticsearch ou para outras saídas, como sistemas de armazenamento ou visualização. Os Beats são projetados para serem simples de configurar, altamente eficientes e escaláveis.
 
 # Grafana Stack
 <img src="https://img.shields.io/badge/Grafana-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white"> <img src="https://img.shields.io/badge/Prometheus-25.3.2-E6522C?style=flat&logo=Prometheus&logoColor=white"> <img src="https://img.shields.io/badge/OpenTelemetry-25.3.2-gold?style=flat&logo=OpenTelemetry&logoColor=white"> 
