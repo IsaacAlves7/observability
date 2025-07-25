@@ -3,7 +3,9 @@
 
 <img src="https://user-images.githubusercontent.com/61624336/172407209-627822a2-0a5f-4778-b58e-954481ee788b.gif" align="right" height="77">
 
-A **observabilidade** é um conceito fundamental em engenharia de sistemas e DevOps, que se refere à capacidade de entender o que está acontecendo dentro de um sistema complexo através da coleta, agregação e análise de seus dados de desempenho e operação. A ideia central é fornecer visibilidade e insights sobre o estado interno do sistema com base nas saídas externas. Observabilidade refere-se à capacidade de monitorar, mensurar e entender o estado de um sistema ou aplicação por meio da análise de seus resultados, logs e métricas de desempenho. Em sistemas de software modernos e na cloud computing, a observabilidade desempenha um papel de extrema importância, por garantir confiabilidade, desempenho e segurança a aplicações e a infraestrutura.
+A **observabilidade** é um conceito fundamental em engenharia de sistemas e DevOps, que se refere à capacidade de entender o que está acontecendo dentro de um sistema complexo através da coleta, agregação e análise de seus dados de desempenho e operação. A ideia central é fornecer visibilidade e insights sobre o estado interno do sistema com base nas saídas externas. 
+
+Observabilidade refere-se à capacidade de monitorar, mensurar e entender o estado de um sistema ou aplicação por meio da análise de seus resultados, logs e métricas de desempenho. Em sistemas de software modernos e na cloud computing, a observabilidade desempenha um papel de extrema importância, por garantir confiabilidade, desempenho e segurança a aplicações e a infraestrutura.
 
 Essa maior importância da observabilidade hoje pode ser atribuída a fatores como: o aumento da complexidade dos sistemas de software, a adoção difundida dos microsserviços e a crescente dependência das arquiteturas distribuídas.
 
