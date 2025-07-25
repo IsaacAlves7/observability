@@ -137,7 +137,7 @@ E qual a melhor plataforma para monitoramento e visualização de logs em aplica
 
 - Nagios: O Nagios é uma das ferramentas mais conhecidas e utilizadas para monitoramento de sistemas, redes e infraestrutura. Ele oferece recursos abrangentes para monitorar a disponibilidade de serviços, a integridade dos dispositivos, o desempenho de redes e outros aspectos críticos de sistemas de TI.
 
-# Zabbix
+# 🟥 Zabbix
 <img src="https://img.shields.io/badge/Grafana_Stack-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white">
 
 <a href=""><img src="https://www.vectorlogo.zone/logos/zabbix/zabbix-ar21.svg" align="right" height="77"></a>
@@ -150,7 +150,7 @@ A interface web do Zabbix oferece dashboards personalizáveis, gráficos, mapas 
 
 Além disso, o Zabbix é gratuito sob licença GPL, o que atrai a comunidade de software livre e permite personalizações sem custo de licença. No entanto, também existem serviços comerciais e suporte oferecidos pela empresa Zabbix SIA para empresas que desejam assistência profissional ou hospedagem gerenciada. O Zabbix é uma solução madura, ativa desde os anos 2000, com uma base sólida de usuários e ampla documentação. Em um mundo onde manter a disponibilidade e o desempenho dos sistemas é essencial para os negócios, o Zabbix se consolida como uma ferramenta completa e confiável para garantir que tudo esteja funcionando como deveria.
 
-# New Relic
+# 🟩 New Relic
 <a href=""><img src="" align="right" height="77"></a>
 
 **New Relic** é uma plataforma de observabilidade e monitoramento de desempenho de aplicações (APM — Application Performance Monitoring) que permite a desenvolvedores, engenheiros de software, operadores de infraestrutura e equipes de negócios acompanharem em tempo real o comportamento de seus sistemas digitais. Assim como o Datadog, ela centraliza uma ampla variedade de dados — como métricas, logs, rastreamentos distribuídos (traces), eventos e informações do navegador do usuário — para que os times possam diagnosticar problemas, melhorar a performance e tomar decisões baseadas em dados concretos. A filosofia do New Relic é oferecer uma visão unificada da saúde e do desempenho de toda a stack tecnológica, desde o frontend até os bancos de dados e serviços externos.
