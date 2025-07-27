@@ -271,13 +271,17 @@ O **Elastic Beats**, muitas vezes chamado apenas de "Beats," é uma coleção de
 # ☀️ Grafana Stack
 <img src="https://img.shields.io/badge/Grafana_Stack-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white"> <img src="https://img.shields.io/badge/Grafana-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white"> <img src="https://img.shields.io/badge/Prometheus-25.3.2-E6522C?style=flat&logo=Prometheus&logoColor=white"> <img src="https://img.shields.io/badge/OpenTelemetry-25.3.2-gold?style=flat&logo=OpenTelemetry&logoColor=white">
 
-<img src="https://cdn.worldvectorlogo.com/logos/grafana.svg" align="right" height="77">
+<a href="https://grafana.com/"><img src="https://cdn.worldvectorlogo.com/logos/grafana.svg" align="right" height="77"></a>
 
 O **Grafana Stack** é um conjunto de ferramentas desenvolvidas e mantidas pela Grafana Labs com o objetivo de fornecer uma plataforma completa e integrada para observabilidade, ou seja, para o monitoramento, análise e visualização de dados de sistemas, aplicações, infraestrutura e serviços. Ele é muito utilizado por equipes de DevOps, SREs e engenheiros de software para entenderem como os sistemas estão se comportando em tempo real, detectar falhas, identificar gargalos e manter a confiabilidade dos ambientes em produção. A base desse stack é o Grafana, uma ferramenta open source de visualização de métricas, logs e traces que permite a criação de dashboards interativos altamente customizáveis.
 
 Dentro do Grafana Stack, há várias soluções que se complementam. O Grafana em si é a interface principal, onde os usuários constroem painéis e gráficos a partir de dados oriundos de diferentes fontes. Ele se conecta a bancos de dados de séries temporais como Prometheus, InfluxDB, Graphite e também a fontes de logs como Loki. 
 
+<img src="https://github.com/user-attachments/assets/0b1c3fd2-ae8a-4c90-b249-1b4f7924a39a" align="right" height="77">
+
 O **Loki**, inclusive, é parte do stack e foi desenvolvido pela própria Grafana Labs para tratar logs de maneira semelhante ao Prometheus trata métricas: como séries temporais indexadas, porém com menor sobrecarga de processamento. Já o Prometheus, embora não seja originalmente criado pela Grafana Labs, é amplamente adotado e compatível com o stack, sendo responsável pela coleta de métricas de aplicações e sistemas, muitas vezes através de endpoints expostos pelas próprias aplicações (como o padrão /metrics).
+
+<img src="https://github.com/user-attachments/assets/e258fe05-6aa0-4df5-9189-3a023aa894b0" align="right" height="77">
 
 Além disso, o stack inclui o **Tempo**, que é uma ferramenta de rastreamento distribuído (distributed tracing). O Grafana Tempo permite visualizar e analisar traces de requisições em sistemas complexos, o que é essencial para diagnosticar problemas de performance, identificar latências entre serviços e entender o fluxo de chamadas em arquiteturas de microsserviços. Ele se integra com bibliotecas como OpenTelemetry e Jaeger, permitindo rastrear requisições de ponta a ponta. Com Loki, Prometheus e Tempo juntos, o Grafana Stack oferece uma solução chamada de “correlação de observabilidade”, onde o usuário consegue cruzar logs, métricas e traces em uma única interface, facilitando investigações e diminuindo o tempo de resposta a incidentes.
 
