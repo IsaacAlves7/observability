@@ -57,7 +57,7 @@ Continuous Integration (CI):
 
 Continuous Delivery/Deployment (CD):
 
-<img height="277" align="right" src="https://github.com/user-attachments/assets/77fefcf5-4e9f-4bfa-ad2c-1cdd85c92456" />
+<img height="177" align="right" src="https://github.com/user-attachments/assets/77fefcf5-4e9f-4bfa-ad2c-1cdd85c92456" />
 
   - Logging: Logs são cruciais durante a fase de deployment para registrar as atividades de implementação, mudanças de configuração e qualquer problema que ocorra durante o processo. Eles permitem o rastreamento de quem fez o que e quando.
 
@@ -67,7 +67,7 @@ Continuous Delivery/Deployment (CD):
 
 Nas etapas/fases de Operações e Monitoramento:
 
-<img height="277" align="right" src="https://github.com/user-attachments/assets/48b293ce-e582-4d58-8536-8ce6cdaeb03b" />
+<img height="177" align="right" src="https://github.com/user-attachments/assets/48b293ce-e582-4d58-8536-8ce6cdaeb03b" />
 
   - Monitoring: O monitoramento contínuo do sistema em produção garante que o serviço esteja funcionando corretamente e permite a detecção proativa de problemas. Isso inclui a monitorização de métricas como uso de CPU, memória, latência, taxas de erro, etc.
 
