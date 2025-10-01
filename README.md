@@ -99,6 +99,8 @@ Então, o que você faz para analisar esse erro? Você põe log na sua aplicaç�
 
 **Logging**: Então, você começa a profissionalizar mais esse cenário e utilizar bibliotecas de Logs ao invés de escrever em seus arquivos de texto, como:
 
+<img src="" align="right" height="77">
+
 - <a href="">NLog</a>: é uma biblioteca para C-Sharp.
 
 - <a href="">Serilog</a>: é uma biblioteca para .NET.
@@ -183,6 +185,12 @@ A forma como ele realiza as checagens varia conforme o tipo de monitoramento con
 Além da sua simplicidade e facilidade de uso, o UptimeRobot também oferece dashboards e históricos de disponibilidade, permitindo que equipes acompanhem métricas como percentual de uptime mensal ou anual, tempo médio de resposta e momentos em que ocorreram falhas. Esses dados podem ser exibidos em painéis públicos, que são úteis para mostrar transparência ao cliente, ou privados, apenas para os administradores. Como ele possui servidores espalhados pelo mundo, consegue monitorar a disponibilidade de um site a partir de diferentes regiões geográficas, o que ajuda a identificar problemas de acessibilidade regional ou bloqueios por CDN e firewalls.
 
 Empresas de todos os tamanhos usam o UptimeRobot como uma primeira camada de detecção de problemas, especialmente em sistemas que exigem alta disponibilidade, como e-commerces, APIs públicas, serviços financeiros e plataformas SaaS. Embora não ofereça a mesma profundidade de uma ferramenta de observabilidade como o New Relic ou o Datadog, o UptimeRobot é uma excelente escolha para monitoramento simples, direto e com baixo custo, sendo frequentemente usado em conjunto com outras ferramentas. Ele se tornou popular entre desenvolvedores independentes, startups e equipes de DevOps que precisam de alertas confiáveis sem a complexidade de configurar soluções mais robustas. Seu modelo freemium com plano gratuito atrai muitos usuários que desejam garantir que seus sistemas estejam sempre no ar, o que faz dele uma peça útil em qualquer stack de monitoramento.
+
+# Nagios
+
+# Splunk
+
+# Voice search
 
 # 🐶 Datadog
 <a href=""><img src="" align="right" height="77"></a>
