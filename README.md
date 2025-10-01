@@ -1,7 +1,7 @@
 # It's a repository of Observability from scratch 🔍
 <img src="https://img.shields.io/badge/Grafana_Stack-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white"> <img src="https://img.shields.io/badge/Datadog-25.3.2-632CA6?style=flat&logo=Datadog&logoColor=white"> <img src="https://img.shields.io/badge/Elastic_Stack-25.3.2-005571?style=flat&logo=Elastic&logoColor=white"> <img src="https://img.shields.io/badge/Graylog-25.3.2-FF3633?style=flat&logo=Graylog&logoColor=white"> <img src="https://img.shields.io/badge/NewRelic-25.3.2-1CE783?style=flat&logo=NewRelic&logoColor=white"> 
 
-<img src="https://user-images.githubusercontent.com/61624336/172407209-627822a2-0a5f-4778-b58e-954481ee788b.gif" align="right" height="77">
+<img src="https://em-content.zobj.net/source/microsoft-teams/400/magnifying-glass-tilted-left_1f50d.png" align="right" height="77">
 
 A **observabilidade** (observability) é um conceito fundamental em engenharia de sistemas e DevOps, que se refere à capacidade de entender o que está acontecendo dentro de um sistema complexo através da coleta, agregação e análise de seus dados de desempenho e operação. A ideia central é fornecer visibilidade e insights sobre o estado interno do sistema com base nas saídas externas. 
 
@@ -18,6 +18,8 @@ Observabilidade e monitoramento são conceitos relacionados, mas têm algumas di
 Em poucas palavras, a observabilidade nativa da nuvem é uma prática de monitoramento, análise e solução de problemas de aplicativos modernos e nativos da nuvem criados usando arquitetura de microsserviços e implantados em contêineres ou ambientes sem servidor. 
 
 A observabilidade baseia-se em três pilares principais:
+
+<img src="https://user-images.githubusercontent.com/61624336/172407209-627822a2-0a5f-4778-b58e-954481ee788b.gif" align="right" height="77">
 
 1. **Logs** (Diagnósticos): Registros detalhados de eventos que ocorrem dentro do sistema. Logs fornecem um histórico cronológico das atividades do sistema e são úteis para diagnosticar problemas específicos, entender a sequência de eventos e rastrear bugs. É todo o diagnóstico preciso dentro do sistema.
 
