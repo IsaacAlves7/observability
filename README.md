@@ -49,6 +49,8 @@ Portanto, são comumente usadas para implementar essas práticas. Em resumo, a o
 
 Continuous Integration (CI):
 
+<img height="177" align="right" src="https://github.com/user-attachments/assets/7682458c-7491-445a-962e-0e8ec050f957" />
+
   - Logging: Durante a fase de integração contínua, logs são gerados para registrar o progresso da construção, testes e integração do código. Eles ajudam a identificar e resolver problemas de build e erros de integração.
 
   - Monitoring: Nesta fase, o monitoramento pode ser usado para acompanhar o desempenho das builds, uso de recursos do CI server, e saúde dos serviços de CI.
