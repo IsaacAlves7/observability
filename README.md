@@ -209,6 +209,8 @@ Elastic Stack ou ELK Stack é um produto open-source designado para tratar e org
 
 O ELK Stack é amplamente utilizado em operações de TI, monitoramento de sistemas e segurança da informação para coletar, analisar e visualizar logs e eventos de diversas fontes. É uma ferramenta poderosa para detectar problemas, solucionar problemas, monitorar o desempenho e a segurança de sistemas e aplicativos, e muito mais. Oferecendo diversos mecanismos de busca e análise, o processo de integrar e centralizar os logs em um único local nos ajuda a identificar diversos problemas com os nossos servidores e aplicações. Portanto, o Elastic Stack pode ser usado para monitorar tanto a aplicação quanto a infraestrutura em produção, oferecendo uma gama de ferramentas para coleta, armazenamento, análise e visualização de dados operacionais.
 
+<img width="656" height="393" alt="diagram-opentelemetry-api-sdk-with-elastic-apm-agents" src="https://github.com/user-attachments/assets/223f6b93-f553-49f1-b062-c17eb117ab78" />
+
 Com a difusão, crescimento e expansão desses projetos, a comunidade inseriu um novo projeto para coleta de dados, conhecido como **Beats**. Deste modo, a ferramenta que era formada pelo acrônimo “ELK” não tinha mais sentido com os Beats, pois iria ficar uma sopa de letrinhas. Assim, surgiu o Elastic Stack que atualmente é mantido pela Elastic.
 
 <img src="https://user-images.githubusercontent.com/61624336/234415822-3c516b5b-9779-4c6a-bed3-78367f8b3be1.svg" height="77" align="right">
