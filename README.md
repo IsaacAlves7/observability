@@ -67,6 +67,8 @@ Continuous Delivery/Deployment (CD):
 
 Nas etapas/fases de Operações e Monitoramento:
 
+<img height="277" align="right" src="https://github.com/user-attachments/assets/48b293ce-e582-4d58-8536-8ce6cdaeb03b" />
+
   - Monitoring: O monitoramento contínuo do sistema em produção garante que o serviço esteja funcionando corretamente e permite a detecção proativa de problemas. Isso inclui a monitorização de métricas como uso de CPU, memória, latência, taxas de erro, etc.
 
   - Observabilidade: A observabilidade aqui é fundamental para obter uma visão abrangente do estado do sistema. Utiliza logs, métricas e traços para proporcionar uma compreensão profunda de como o sistema está operando, identificar anomalias, realizar análises de causa raiz e otimizar o desempenho.
