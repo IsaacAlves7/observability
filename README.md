@@ -105,7 +105,7 @@ Então, o que você faz para analisar esse erro? Você põe log na sua aplicaç�
 
 **Logging**: Então, você começa a profissionalizar mais esse cenário e utilizar bibliotecas de Logs ao invés de escrever em seus arquivos de texto, como:
 
-<img src="" align="right" height="77">
+<img src="https://em-content.zobj.net/source/microsoft-teams/400/page-facing-up_1f4c4.png" align="right" height="77">
 
 - <a href="">NLog</a>: é uma biblioteca para C-Sharp.
 
