@@ -473,6 +473,3 @@ Os principais tipos de experimentos conduzidos com o Gremlin se enquadram em cat
 A execução destes testes segue uma metodologia rigorosa e científica, geralmente no modelo "Avanço Gradual com Controle de Estrago". Um experimento não começa afetando toda a base de usuários. Ele inicia em um ambiente de staging ou em uma pequena porção isolada da produção, com a equipe totalmente alerta e preparada para abortar o teste instantaneamente se o impacto for maior que o antecipado. Conforme a confiança na resiliência do sistema cresce, os experimentos podem se tornar mais amplos e complexos.
 
 Em essência, o teste com Gremlin não é sobre "quebrar o sistema por quebrar", mas sim sobre aprender proativamente com as falhas em um ambiente controlado. É um investimento na confiabilidade do sistema, cujo resultado não é um simples "passou/falhou", mas um relatório detalhado de pontos fracos descobertos, gaps nos procedimentos de resposta a incidentes e oportunidades de melhoria arquitetural. Ele transforma a postura da equipe de reativa para proativa, permitindo que se fortaleçam as defesas do sistema antes que uma falha real e imprevista cause um prejuízo significativo ao negócio.
-
-<img width="850" height="420" alt="image-398" src="https://github.com/user-attachments/assets/08a20eed-40e4-4e51-b452-4ba3357256dc" />
-
