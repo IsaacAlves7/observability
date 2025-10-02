@@ -1,3 +1,5 @@
+<a href="https://github.com/IsaacAlves7/observability"><img src="https://github.com/user-attachments/assets/484f5c35-e123-46af-b5c2-0e413c1b79bd"></a>
+
 # It's a repository of Observability from scratch 🔍
 <img src="https://img.shields.io/badge/Grafana_Stack-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white"> <img src="https://img.shields.io/badge/Datadog-25.3.2-632CA6?style=flat&logo=Datadog&logoColor=white"> <img src="https://img.shields.io/badge/Elastic_Stack-25.3.2-005571?style=flat&logo=Elastic&logoColor=white"> <img src="https://img.shields.io/badge/Graylog-25.3.2-FF3633?style=flat&logo=Graylog&logoColor=white"> <img src="https://img.shields.io/badge/NewRelic-25.3.2-1CE783?style=flat&logo=NewRelic&logoColor=white"> 
 
