@@ -439,6 +439,9 @@ Além da escala e economia, o Mimir introduz funcionalidades de nível empresari
 
 Em essência, o Mimir não é um substituto para o Prometheus, mas sim seu complemento ideal em ambientes de grande escala. Ele permite que as organizações mantenham a simplicidade operacional e o modelo de dados do Prometheus em cada unidade de deploy, enquanto colhe os benefícios de um data lake de métricas corporativo. Ele transforma o monitoramento de uma coleção de instâncias independentes e desconectadas em um sistema nervoso centralizado e unificado para a infraestrutura inteira, permitindo que engenheiros façam perguntas ambiciosas sobre o comportamento de seus sistemas em qualquer escala de tempo, desde segundos até anos, com a mesma facilidade e velocidade. É a materialização da visão de que, na era da nuvem, o monitoramento não deve ser um luxo ou um custo proibitivo, mas uma utilidade pública dentro da organização, tão confiável e escalável quanto a própria plataforma que ela observa.
 
+<img alt="800px-OBS" src="https://github.com/user-attachments/assets/f092945d-cc75-4ec6-a620-599acd6b22fb" />
+
+
 # ⚡ Typesense
 <a href="https://typesense.org/"><img src="https://github.com/user-attachments/assets/c1fd54a2-4353-4067-8844-4802542e59f2" align="right" height="77"></a>
 
