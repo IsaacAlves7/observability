@@ -269,7 +269,7 @@ Para equipes que praticam SRE (Site Reliability Engineering) ou DevOps, o Sentry
 Em essência, o Sentry.io preenche uma lacuna crítica no ecossistema de observabilidade: enquanto ferramentas como Dynatrace falam sobre "o que" está acontecendo no sistema como um todo, o Sentry fala sobre "por que" algo está acontecendo no nível do código. Ele traduz falhas de sistema abstratas em problemas de código concretos e acionáveis, fechando o loop entre operações e desenvolvimento. Para uma equipe de engenharia, isso significa menos tempo depurando cegamente e mais tempo corrigindo problemas reais que impactam usuários reais, transformando o caótico processo de lidar com erros em produção em uma disciplina sistemática e eficiente.
 
 # 🐶 Datadog
-<a href=""><img src="" align="right" height="77"></a>
+<a href=""><img src="https://github.com/user-attachments/assets/4865a2d9-589f-4f38-a413-c321236531f4" align="right" height="77"></a>
 
 **Datadog** é uma plataforma de monitoramento e análise baseada na nuvem, projetada para fornecer visibilidade completa sobre a infraestrutura de TI, aplicações e serviços em execução em ambientes modernos, especialmente os que utilizam arquiteturas distribuídas, microserviços, contêineres e nuvens públicas ou híbridas. Seu objetivo é ajudar engenheiros, desenvolvedores, times de DevOps, SRE e segurança a observarem o comportamento de seus sistemas em tempo real, correlacionando métricas, logs, rastreamentos distribuídos e eventos em uma interface unificada e de fácil uso. Com isso, o Datadog permite detectar problemas de desempenho, gargalos, falhas ou comportamentos anômalos antes que impactem os usuários finais.
 
