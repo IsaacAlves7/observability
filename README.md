@@ -11,6 +11,8 @@ Observabilidade refere-se à capacidade de monitorar, mensurar e entender o esta
 
 Essa maior importância da observabilidade hoje pode ser atribuída a fatores como: o aumento da complexidade dos sistemas de software, a adoção difundida dos microsserviços e a crescente dependência das arquiteturas distribuídas.
 
+> "Quem não é visto, não é lembrado, Quem não é lembrado, acaba sendo esquecido." - Patrick Münzfeld
+
 A observabilidade absorve e estende os sistemas de monitoramento clássicos e ajuda as equipes a identificarem a causa raiz dos problemas. Por ela, os stakeholders também esclarecem dúvidas sobre suas aplicações e negócios, como, por exemplo, previsões sobre possíveis erros. Um conjunto diversificado de ferramentas e tecnologias usadas hoje leva a uma grande matriz de possibilidades de implantação. Isso traz consequências arquitetônicas, portanto as equipes precisam saber configurar seus sistemas de observabilidade de maneira que sejam funcionais para elas. 
 
 Observabilidade e monitoramento são conceitos relacionados, mas têm algumas diferenças importantes. A observabilidade refere-se à capacidade de fazer perguntas sobre seu sistema examinando seu comportamento de fora.
