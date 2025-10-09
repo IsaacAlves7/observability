@@ -15,7 +15,7 @@ Essa maior importância da observabilidade hoje pode ser atribuída a fatores co
 
 A observabilidade absorve e estende os sistemas de monitoramento clássicos e ajuda as equipes a identificarem a causa raiz dos problemas. Por ela, os stakeholders também esclarecem dúvidas sobre suas aplicações e negócios, como, por exemplo, previsões sobre possíveis erros. Um conjunto diversificado de ferramentas e tecnologias usadas hoje leva a uma grande matriz de possibilidades de implantação. Isso traz consequências arquitetônicas, portanto as equipes precisam saber configurar seus sistemas de observabilidade de maneira que sejam funcionais para elas. 
 
-Observabilidade e monitoramento são conceitos relacionados, mas têm algumas diferenças importantes. A observabilidade refere-se à capacidade de fazer perguntas sobre seu sistema examinando seu comportamento de fora.
+Observabilidade e monitoramento são conceitos relacionados, mas têm algumas diferenças importantes. A observabilidade refere-se à capacidade de fazer perguntas sobre seu sistema examinando seu comportamento de fora. Fazer um sistema e não saber seu rendimento é um tiro no pé de qualquer desenvolvedor de software.
 
 À medida que mais organizações adotam a infraestrutura nativa da nuvem, é provável que a necessidade de ferramentas de observabilidade projetadas especificamente para esses ambientes cresça. As ferramentas de observabilidade nativas em nuvem são projetadas para coletar e analisar dados de microsserviços, contêineres e outras tecnologias nativas em nuvem e fornecer insights sobre o desempenho do sistema nesses ambientes.
 
