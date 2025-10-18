@@ -192,6 +192,12 @@ Essa perspectiva também se aplica à documentação e ao compartilhamento de co
 # 🧠 LLM Observability
 <img src="https://github.com/user-attachments/assets/a8962dc6-9680-4dc8-b79f-410a6d9b2c61" align="right" height="77">
 
+Os grandes modelos de linguagem (LLMs) e plataformas de IA generativa (geração de IA), como IBM watsonx.ai® e uma variedade crescente de variantes de código aberto, estão se consolidando em todos os setores. Devido a esse aumento, tornou-se mais importante do que nunca manter a confiabilidade, segurança e eficiência dos modelos e aplicações após a adoção. Este espaço é onde a observabilidade do LLM se torna essencial.
+
+A **observabilidade do LLM** é o processo de coleta de dados em tempo real de modelos ou aplicativos do LLM sobre suas características comportamentais, de desempenho e de saída. Como os LLMs são complexos, podemos observá-los com base em padrões no que eles produzem.
+
+Uma boa solução de observabilidade consiste em coletar métricas, rastreamentos e logs relevantes de aplicativos LLM, interfaces de programação de aplicativos (APIs) e fluxos de trabalho, o que permite que os desenvolvedores monitorem, depurem e otimizem aplicativos de forma eficiente, proativa e em escala.
+
 # 🟥 Zabbix
 <img src="https://img.shields.io/badge/Grafana_Stack-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white">
 
