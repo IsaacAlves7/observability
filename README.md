@@ -69,7 +69,7 @@ Portanto, são comumente usadas para implementar essas práticas. Em resumo, a o
 
 Continuous Integration (CI):
 
-<img height="177" align="right" src="https://github.com/user-attachments/assets/7682458c-7491-445a-962e-0e8ec050f957" />
+<img height="177" align="right" src="https://github.com/user-attachments/assets/48b293ce-e582-4d58-8536-8ce6cdaeb03b" />
 
   - Logging: Durante a fase de integração contínua, logs são gerados para registrar o progresso da construção, testes e integração do código. Eles ajudam a identificar e resolver problemas de build e erros de integração.
 
@@ -79,7 +79,7 @@ Continuous Integration (CI):
 
 Continuous Delivery/Deployment (CD):
 
-<img height="177" align="right" src="https://github.com/user-attachments/assets/77fefcf5-4e9f-4bfa-ad2c-1cdd85c92456" />
+<img height="177" align="right" src="https://github.com/user-attachments/assets/aa5afcda-45d8-4d30-ac51-54452ef11a26" />
 
   - Logging: Logs são cruciais durante a fase de deployment para registrar as atividades de implementação, mudanças de configuração e qualquer problema que ocorra durante o processo. Eles permitem o rastreamento de quem fez o que e quando.
 
@@ -89,7 +89,7 @@ Continuous Delivery/Deployment (CD):
 
 Nas etapas/fases de Operações e Monitoramento:
 
-<img height="177" align="right" src="https://github.com/user-attachments/assets/48b293ce-e582-4d58-8536-8ce6cdaeb03b" />
+<img height="177" align="right" src="https://github.com/user-attachments/assets/37bea0f6-185b-4c91-95a0-204ba66b4860" />
 
   - Monitoring: O monitoramento contínuo do sistema em produção garante que o serviço esteja funcionando corretamente e permite a detecção proativa de problemas. Isso inclui a monitorização de métricas como uso de CPU, memória, latência, taxas de erro, etc.
 
@@ -98,6 +98,8 @@ Nas etapas/fases de Operações e Monitoramento:
 Em resumo, enquanto logging e monitoring são utilizados em todas as fases do CI/CD, a observabilidade se torna especialmente crítica na fase de operações e monitoramento, onde a complexidade e a necessidade de insights detalhados sobre o sistema são maiores.
 
 No contexto do DevOps, a observabilidade geralmente é considerada uma prática que abrange várias etapas do ciclo de vida do software. Ela envolve a capacidade de compreender o comportamento interno de um sistema com base em suas saídas externas. Isso inclui métricas, registros (logging), rastreamentos (traces) e outras formas de dados que fornecem insights sobre o funcionamento de um sistema. Portanto, logging, monitoring e observabilidade estão presentes em várias etapas do processo de desenvolvimento e implantação de software:
+
+<img height="177" align="right" src="https://github.com/user-attachments/assets/77fefcf5-4e9f-4bfa-ad2c-1cdd85c92456" />
 
 1. **Desenvolvimento**: Durante o desenvolvimento de software, é crucial considerar os requisitos de logging para entender como o código está se comportando durante o desenvolvimento e testes. Isso pode ajudar os desenvolvedores a depurar problemas e entender o comportamento do sistema.
 
@@ -132,6 +134,8 @@ Então, o que você faz para analisar esse erro? Você põe log na sua aplicaç�
 - <a href="">Monolog</a>: É uma biblioteca de log para PHP.
 
 - <a href="">Graylog</a>: é uma plataforma de gerenciamento de logs de código aberto que ajuda na coleta, armazenamento, análise e visualização de registros de diferentes fontes. Ele oferece uma solução integrada para lidar com logs de várias fontes, permitindo que as equipes de operações e desenvolvimento monitorem e analisem informações cruciais dos sistemas.
+
+<img height="177" align="right" src="https://github.com/user-attachments/assets/7682458c-7491-445a-962e-0e8ec050f957" />
 
 **Monitoring**: Pode ser que aconteça outros casos também, vamos supor que seu servidor vai ficar sem internet ou desligado ou ficar travado e você não vai estar tomando nenhum erro, mas os usuários não vão conseguir acessar, o que você pode fazer pra entender esse tipo de situação é utilizar um serviço de **health check** (checagem de saúde), ele pode não só ver se sua URL do site está em pé, mas também fazer uma consulta no banco. Veja as soluções abaixo:
 
