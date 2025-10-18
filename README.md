@@ -79,7 +79,7 @@ Continuous Integration (CI):
 
 Continuous Delivery/Deployment (CD):
 
-<img height="177" align="right" src="https://github.com/user-attachments/assets/aa5afcda-45d8-4d30-ac51-54452ef11a26" />
+<img height="177" align="right" src="https://github.com/user-attachments/assets/3342bc19-b756-4539-b5eb-56bbcd622e2f" />
 
   - Logging: Logs são cruciais durante a fase de deployment para registrar as atividades de implementação, mudanças de configuração e qualquer problema que ocorra durante o processo. Eles permitem o rastreamento de quem fez o que e quando.
 
