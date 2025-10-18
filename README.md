@@ -185,6 +185,9 @@ Ferramentas como Elasticsearch, Splunk ou Loki funcionam como “motores de busc
 
 Essa perspectiva também se aplica à documentação e ao compartilhamento de conhecimento dentro de equipes. Muitas vezes, quando um erro recorrente aparece, alguém já escreveu uma análise ou uma runbook interna explicando como lidar com ele. Se esses registros não são fáceis de encontrar, eles perdem valor. Usar princípios de SEO internos — títulos claros, descrições concisas, palavras-chave adequadas nos documentos técnicos — garante que engenheiros, ao buscarem por determinado erro ou serviço, encontrem de imediato o guia certo. Assim, mecanismos de busca somados a uma “cultura de SEO para observabilidade” funcionam como aceleradores de incident response, reduzindo MTTR (Mean Time to Recovery) e aumentando a maturidade do time.
 
+# 🧠 LLM Observability
+<img src="https://github.com/user-attachments/assets/a8962dc6-9680-4dc8-b79f-410a6d9b2c61" align="right" height="77">
+
 # 🟥 Zabbix
 <img src="https://img.shields.io/badge/Grafana_Stack-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white">
 
