@@ -468,6 +468,8 @@ O OpenTelemetry está rapidamente se tornando o padrão de telemetria de observa
 
 ![image](https://github.com/user-attachments/assets/550b9c21-58cb-46e0-afa5-79a6abeef9f9)
 
+<img src="https://github.com/user-attachments/assets/31458caf-6921-42a6-a8bf-636f587c2f23" align="right" height="77">
+
 O **Mimir**, dentro do ecossistema Grafana, é um banco de dados de métricas de longo prazo, open-source e horizontalmente escalável, projetado especificamente para resolver os gargalos de desempenho e operacionais que surgem quando os ambientes de monitoramento baseados em Prometheus crescem para escalas massivas. Ele representa a evolução natural do Prometheus para um contexto empresarial, atuando como uma camada de armazenamento e agregação que permite a centralização de dados de centenas ou mesmo milhares de clusters Prometheus distribuídos, sem sacrificar a performance de consulta ou a confiabilidade.
 
 A motivação fundamental por trás do Mimir é um desafio comum em organizações com infraestruturas complexas: a fragmentação de dados. Em uma arquitetura típica, cada time ou aplicação pode ter seu próprio Prometheus, criando silos de métricas onde é impossível correlacionar eventos entre diferentes domínios. O Mimir quebra esses silos ao oferecer um backend único e unificado para todos os dados de métricas, permitindo consultas globais que abrangem toda a organização. Ele é compatível com a API do Prometheus, o que significa que ferramentas existentes como o Grafana podem se conectar a ele de forma transparente, como se fosse um Prometheus local, mas com a capacidade de acessar um volume de dados ordens de magnitude maior.
