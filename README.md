@@ -204,6 +204,9 @@ A **observabilidade do LLM** é o processo de coleta de dados em tempo real de m
 
 Uma boa solução de observabilidade consiste em coletar métricas, rastreamentos e logs relevantes de aplicativos LLM, interfaces de programação de aplicativos (APIs) e fluxos de trabalho, o que permite que os desenvolvedores monitorem, depurem e otimizem aplicativos de forma eficiente, proativa e em escala.
 
+<img src="https://github.com/user-attachments/assets/3917b777-7fcb-4267-8d9b-2ea2f17335e5" align="right" height="77">
+
+
 # 🟥 Zabbix
 <img src="https://img.shields.io/badge/Grafana_Stack-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white">
 
