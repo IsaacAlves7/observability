@@ -205,6 +205,8 @@ Agora, a conexão entre os dois mundos começa a surgir quando a empresa amadure
 
 Em pipelines modernos, é comum integrar essas duas visões. Por exemplo:
 
+<img height="177" align="right" src="https://github.com/user-attachments/assets/5c1fe7aa-d923-4bd9-8d1c-3c8c66c0e93a" />
+
 * Logs de erro e traces (Elastic / OpenTelemetry) podem ser correlacionados com eventos de analytics (Amplitude / Mixpanel).
 * Métricas de performance (Prometheus / Grafana) podem alimentar painéis junto com KPIs de produto.
 * Dados de sessão (Google Analytics / PostHog) podem ser enriquecidos com dados de infraestrutura em Data Lakes unificados (S3, BigQuery, Snowflake).
