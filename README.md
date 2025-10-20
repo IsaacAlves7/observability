@@ -21,6 +21,8 @@ O **monitoramento** é a prática estabelecida há décadas. Ele opera com uma l
 
 Monitorar tudo pode parecer útil, mas às vezes menos é mais.
 
+<img src="https://em-content.zobj.net/source/microsoft-teams/400/microscope_1f52c.png" align="right" height="77">
+
 A observabilidade, por outro lado, é uma propriedade do sistema e uma filosofia proativa. Ela não se limita a verificar métricas pré-definidas; ela se preocupa em instrumentar o sistema de forma a gerar dados ricos e correlacionáveis (os famosos "três pilares": métricas, logs e traces distribuídos) que permitam investigar o comportamento interno a posteriori, sem ter que recriar o problema. A observabilidade entra em cena justamente quando você se depara com o inesperado, o novo, o bizarro. Ela responde à pergunta: "Meu sistema está se comportando de forma estranha e não tenho ideia do porquê. Como eu investigo isso?".
 
 A diferença crucial está no fluxo de trabalho. O monitoramento grita: "Algo que eu conheço está errado!". A observabilidade sussurra: "Aqui estão todos os dados. Agora, faça as perguntas certas para descobrir o que há de errado, mesmo que você não soubesse que isso poderia acontecer."
