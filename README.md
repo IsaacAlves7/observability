@@ -193,27 +193,31 @@ Ferramentas como Elasticsearch, Splunk ou Loki funcionam como “motores de busc
 
 Essa perspectiva também se aplica à documentação e ao compartilhamento de conhecimento dentro de equipes. Muitas vezes, quando um erro recorrente aparece, alguém já escreveu uma análise ou uma runbook interna explicando como lidar com ele. Se esses registros não são fáceis de encontrar, eles perdem valor. Usar princípios de SEO internos — títulos claros, descrições concisas, palavras-chave adequadas nos documentos técnicos — garante que engenheiros, ao buscarem por determinado erro ou serviço, encontrem de imediato o guia certo. Assim, mecanismos de busca somados a uma “cultura de SEO para observabilidade” funcionam como aceleradores de incident response, reduzindo MTTR (Mean Time to Recovery) e aumentando a maturidade do time.
 
-<img height="177" align="right" src="https://github.com/user-attachments/assets/5cc1ec4e-e9fb-47a9-b82a-4d8a8121ba1a" />
+<img height="177" align="right" src="https://github.com/user-attachments/assets/5c1fe7aa-d923-4bd9-8d1c-3c8c66c0e93a" />
 
 Especialmente pra quem vem do universo de Observability e começa a transitar também por **Product Analytics** ou **Digital Analytics**. A resposta curta é: não são a mesma coisa, mas podem se complementar profundamente, dependendo do contexto e da maturidade da empresa. Vamos por partes:
 
-**Observabilidade (Observability)** é um conceito originado da engenharia de software e da confiabilidade de sistemas. Ela se baseia em três pilares principais — **logs, métricas e traces** — e serve para responder perguntas como: *“O sistema está funcionando como esperado?”*, *“Por que o serviço X está lento?”* ou *“Qual parte do pipeline de dados falhou?”*. Ferramentas típicas de observabilidade incluem **Elastic Stack (ELK)**, **Prometheus**, **Grafana**, **Jaeger**, **OpenTelemetry**, **Datadog**, **New Relic**, **Dynatrace**, entre outras. Ou seja, o foco da observabilidade é **técnico e operacional**: acompanhar a **saúde**, **performance**, **latência**, **erros** e **comportamento interno** das aplicações e infraestruturas.
+*Observabilidade (Observability)* é um conceito originado da engenharia de software e da confiabilidade de sistemas. Ela se baseia em três pilares principais são logs, métricas e traces, e serve para responder perguntas como: *“O sistema está funcionando como esperado?”*, *“Por que o serviço X está lento?”* ou *“Qual parte do pipeline de dados falhou?”*. 
 
-Já as **ferramentas de Analytics** como **Google Analytics, Amplitude, Mixpanel, Pendo, Heap, PostHog**, entre outras, são orientadas a **produto e negócio**. Elas servem para responder perguntas como: *“Quantos usuários clicaram nesse botão?”*, *“Qual fluxo de onboarding tem mais abandono?”*, *“Qual cohort de clientes retém mais?”* ou *“Qual feature está gerando mais conversão?”*. Em suma, o foco é **comportamento do usuário, funis de conversão, engajamento e retenção**.
+Ferramentas típicas de observabilidade incluem **Elastic Stack (ELK)**, **Prometheus**, **Grafana**, **Jaeger**, **OpenTelemetry**, **Datadog**, **New Relic**, **Dynatrace**, entre outras. Ou seja, o foco da observabilidade é técnico e operacional: acompanhar a **saúde**, **performance**, **latência**, **erros** e **comportamento interno** das aplicações e infraestruturas.
 
-Agora, a conexão entre os dois mundos começa a surgir quando a empresa amadurece e percebe que **a experiência do usuário final e a performance técnica estão interligadas**. Por exemplo, uma queda de conversão observada no **Mixpanel** pode ter como causa uma lentidão no back-end detectada pelo **Grafana**. Ou uma alta taxa de erro no **Kibana** pode estar impactando o evento “checkout_completed” rastreado no **Amplitude**. Nesse ponto, começa o que chamamos de **Observabilidade orientada a produto (Product Observability)** — um conceito emergente que une o melhor dos dois mundos: dados técnicos e dados de uso do usuário.
+Já as **ferramentas de Analytics** como **Google Analytics, Amplitude, Mixpanel, Pendo, Heap, PostHog**, entre outras, são orientadas a *produto e negócio*. Elas servem para responder perguntas como: *“Quantos usuários clicaram nesse botão?”*, *“Qual fluxo de onboarding tem mais abandono?”*, *“Qual cohort de clientes retém mais?”* ou *“Qual feature está gerando mais conversão?”*. Em suma, o foco é **comportamento do usuário, funis de conversão, engajamento e retenção**.
+
+Agora, a conexão entre os dois mundos começa a surgir quando a empresa amadurece e percebe que **a experiência do usuário final e a performance técnica estão interligadas**. Por exemplo, uma queda de conversão observada no Mixpanel pode ter como causa uma lentidão no back-end detectada pelo Grafana. Ou uma alta taxa de erro no Kibana pode estar impactando o evento “checkout_completed” rastreado no Amplitude. 
+
+Nesse ponto, começa o que chamamos de **Observabilidade orientada a produto (Product Observability)**, um conceito emergente que une o melhor dos dois mundos: dados técnicos e dados de uso do usuário.
 
 Em pipelines modernos, é comum integrar essas duas visões. Por exemplo:
 
-<img height="177" align="right" src="https://github.com/user-attachments/assets/5c1fe7aa-d923-4bd9-8d1c-3c8c66c0e93a" />
+<img height="177" align="right" src="https://github.com/user-attachments/assets/5cc1ec4e-e9fb-47a9-b82a-4d8a8121ba1a" />
 
 * Logs de erro e traces (Elastic / OpenTelemetry) podem ser correlacionados com eventos de analytics (Amplitude / Mixpanel).
 * Métricas de performance (Prometheus / Grafana) podem alimentar painéis junto com KPIs de produto.
 * Dados de sessão (Google Analytics / PostHog) podem ser enriquecidos com dados de infraestrutura em Data Lakes unificados (S3, BigQuery, Snowflake).
 
-Portanto, **Analytics e Observability são domínios distintos — técnico vs comportamental —, mas complementares**. Enquanto a observabilidade te mostra *o que está acontecendo dentro* do sistema, o analytics te mostra *como o usuário está reagindo fora dele*. Quando unidos, fornecem uma visão 360° tanto do produto quanto de sua operação.
+Portanto, Analytics e Observability são domínios distintos, técnico vs comportamental, mas complementares. Enquanto a observabilidade te mostra *o que está acontecendo dentro* do sistema, o analytics te mostra *como o usuário está reagindo fora dele*. Quando unidos, fornecem uma visão 360° tanto do produto quanto de sua operação.
 
-Se você trabalha com observabilidade (Elastic, Prometheus, Grafana) e quer expandir para o lado de Analytics, o caminho natural é começar a estudar **instrumentação de eventos**, **telemetria de comportamento**, **cohort analysis** e **funnel tracking**, para depois pensar em **como cruzar esses dados técnicos e de produto em um mesmo observability pipeline**.
+Se você trabalha com observabilidade (Elastic, Prometheus, Grafana) e quer expandir para o lado de Analytics, o caminho natural é começar a estudar **instrumentação de eventos**, **telemetria de comportamento**, **cohort analysis** e **funnel tracking**, para depois pensar em como cruzar esses dados técnicos e de produto em um mesmo observability pipeline.
 
 # 🧠 LLM Observability
 <img src="https://github.com/user-attachments/assets/a8962dc6-9680-4dc8-b79f-410a6d9b2c61" align="right" height="77">
