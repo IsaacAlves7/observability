@@ -223,7 +223,9 @@ Se você trabalha com observabilidade (Elastic, Prometheus, Grafana) e quer expa
 
 <img height="177" align="right" src="https://github.com/user-attachments/assets/91e023ab-a13e-4f26-8d1a-b9d7a2c1f068" />
 
-Existem também várias ferramentas e plataformas que buscam exatamente isso: medir **tempo médio de visualização** ou **tempo completo assistido** por usuário em vídeos de uma plataforma de streaming VoD (Video on Demand). Por exemplo, a plataforma **Mux** oferece uma solução de analytics de vídeo focada em “viewer engagement” e “watch time”.
+Existem também várias ferramentas e plataformas que buscam exatamente isso: medir **tempo médio de visualização** ou **tempo completo assistido** por usuário em vídeos de uma plataforma de streaming VoD (Video on Demand). 
+
+Por exemplo, a plataforma **Mux** oferece uma solução de analytics de vídeo focada em “viewer engagement” e “watch time”.
 
 Se você está montando ou avaliando uma arquitetura para esse tipo de métrica, vale que você foque nos seguintes pontos:
 
