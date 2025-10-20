@@ -221,6 +221,30 @@ Portanto, Analytics e Observability são domínios distintos, técnico vs compor
 
 Se você trabalha com observabilidade (Elastic, Prometheus, Grafana) e quer expandir para o lado de Analytics, o caminho natural é começar a estudar **instrumentação de eventos**, **telemetria de comportamento**, **cohort analysis** e **funnel tracking**, para depois pensar em como cruzar esses dados técnicos e de produto em um mesmo observability pipeline.
 
+<img height="177" align="right" src="https://github.com/user-attachments/assets/91e023ab-a13e-4f26-8d1a-b9d7a2c1f068" />
+
+Existem também várias ferramentas e plataformas que buscam exatamente isso: medir **tempo médio de visualização** ou **tempo completo assistido** por usuário em vídeos de uma plataforma de streaming VoD (Video on Demand). Por exemplo, a plataforma **Mux** oferece uma solução de analytics de vídeo focada em “viewer engagement” e “watch time”.
+
+Se você está montando ou avaliando uma arquitetura para esse tipo de métrica, vale que você foque nos seguintes pontos:
+
+* O sistema deve capturar eventos de reprodução, pausa, término, avanço, retrocesso, plataforma/dispositivo, identificação de usuário (ou sessão anônima), e tempo de play real.
+* Esses eventos são normalmente enviados a um backend de analytics em tempo real ou quase real, onde são agregados por vídeo, por usuário, por sessão.
+* A métrica “tempo completo assistido” exige definir o que significa “completou” — por exemplo, assistiu ≥ 90% do vídeo ou até o fim nominal — e registrar isso como um evento ou um atributo.
+* Depois, para análise, você pode criar dashboards e relatórios que mostram “média de minutos assistidos por sessão”, “percentual médio de conclusão por vídeo”, “distribuição de duração assistida”, “drop-off por minuto da reprodução” etc.
+* Finalmente, para tornar em uma solução industrial, pense em como integrar esses dados a painéis de BI, como parte de métricas de engajamento, retenção ou churn da plataforma.
+
+Além da Mux, existem várias outras ferramentas que oferecem analytics para vídeo VoD (Video on Demand) e que podem monitorar métricas como tempo de visualização, completação, dispositivos usados, e comportamento do usuário. Abaixo listo algumas com breves descrições:
+
+* Dacast — Oferece vídeos para streaming e VoD com dashboard de analytics em tempo real, incluindo “average time watching” por vídeo, localização, dispositivo e dados de consumo.
+
+* api.video — Fornece endpoints de analytics para vídeos e transmissões ao vivo que permitem consultar “watch time”, número de reproduções, visualizações únicas, além de filtrar por dispositivo ou navegador.
+
+* Kaltura — Plataforma de vídeo corporativo que inclui funcionalidades de VoD Analytics: minutos assistidos, taxa de conclusão, abandono em quartis, por vídeo/entrada. 
+
+* Zype — Plataforma voltada para distribuidores de vídeo e streaming que oferece métricas de engajamento, tempo assistido, sessões simultâneas e segmentação por plataforma/domain.
+
+* Wowza — Solução para vídeo online e streaming que menciona analytics tanto para vídeo ao vivo quanto VoD, com foco em qualidade de experiência e engajamento.
+
 # 🧠 LLM Observability
 <img src="https://github.com/user-attachments/assets/a8962dc6-9680-4dc8-b79f-410a6d9b2c61" align="right" height="77">
 
