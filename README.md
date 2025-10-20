@@ -67,7 +67,7 @@ A observabilidade permite às equipes de engenharia de software detectar, diagno
 
 Portanto, são comumente usadas para implementar essas práticas. Em resumo, a observabilidade é crucial para a manutenção e operação eficiente de sistemas modernos, especialmente em arquiteturas distribuídas e baseadas em microsserviços. Então, logging, monitoring e observabilidade são partes essenciais do ciclo de vida de desenvolvimento, implantação e operação de software. Eles estão relacionados à fase de operação contínua (ou operação) e monitoramento no ciclo de vida do DevOps e CI/CD. 
 
-Continuous Integration (CI):
+Continuous Integration (CI): Visão ampliada
 
 <img height="177" align="right" src="https://github.com/user-attachments/assets/48b293ce-e582-4d58-8536-8ce6cdaeb03b" />
 
@@ -77,7 +77,7 @@ Continuous Integration (CI):
 
   - Observabilidade: Não é um foco principal nesta fase, mas alguns aspectos podem ser monitorados para melhorar a eficiência e detectar problemas nos pipelines de CI.
 
-Continuous Delivery/Deployment (CD):
+Continuous Delivery/Deployment (CD): Visão periférica
 
 <img height="177" align="right" src="https://github.com/user-attachments/assets/3342bc19-b756-4539-b5eb-56bbcd622e2f" />
 
@@ -87,7 +87,7 @@ Continuous Delivery/Deployment (CD):
 
   - Observabilidade: A observabilidade começa a ter um papel mais importante, ajudando a entender o comportamento do sistema pós-deployment, identificar possíveis regressões e garantir que todas as partes do sistema estejam funcionando conforme esperado.
 
-Nas etapas/fases de Operações e Monitoramento:
+Nas etapas/fases de Operações e Monitoramento: Visão espacial
 
 <img height="177" align="right" src="https://github.com/user-attachments/assets/37bea0f6-185b-4c91-95a0-204ba66b4860" />
 
