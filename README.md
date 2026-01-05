@@ -265,7 +265,15 @@ No conjunto, todas essas expressões representam uma maturidade operacional muit
 ## Chaos Engineering
 <img src="https://em-content.zobj.net/source/microsoft-teams/400/exploding-head_1f92f.png" align="right" height="77">
 
-A **engenharia do caos** (Chaos Engineering) é uma disciplina rigorosa e proativa que visa revelar as fraquezas e vulnerabilidades ocultas em sistemas distribuídos complexos através da experimentação controlada. Ela representa uma mudança de paradigma fundamental: em vez de esperar passivamente que as falhas ocorram naturalmente em produção — com todo o impacto negativo no negócio — as equipes planejam e executam deliberadamente experiências que simulam condições adversas para observar como o sistema responde. O objetivo final não é "quebrar o sistema por quebrar", mas sim construir confiança na capacidade do sistema de suportar condições turbulentas e imprevistas.
+A **engenharia do caos** (Chaos Engineering) é uma disciplina rigorosa e proativa que visa revelar as fraquezas e vulnerabilidades ocultas em sistemas distribuídos complexos através da experimentação controlada. 
+
+Engenharia do caos é uma disciplina onde falhas são intencionalmente introduzidas em um sistema para testar sua resiliência. O objetivo não é causar estragos, mas sim descobrir fraquezas em um ambiente controlado antes que elas se manifestem na produção.
+
+Ela representa uma mudança de paradigma fundamental: em vez de esperar passivamente que as falhas ocorram naturalmente em produção — com todo o impacto negativo no negócio — as equipes planejam e executam deliberadamente experiências que simulam condições adversas para observar como o sistema responde. O objetivo final não é "quebrar o sistema por quebrar", mas sim construir confiança na capacidade do sistema de suportar condições turbulentas e imprevistas.
+
+Ao simular eventos inesperados como falhas de servidores, quedas de rede ou exaustão de recursos, a engenharia do caos ajuda as organizações a entenderem como seus sistemas se comportam sob estresse e como podem se recuperar de forma mais eficiente.
+
+Os testadores desempenham um papel vital nos experimentos de caos, garantindo que sejam bem planejados, controlados, automatizados e conduzam a insights acionáveis. Abaixo estão os papéis-chave que os testadores desempenham na engenharia do caos, com exemplos de Amazon.com
 
 A filosofia central da engenharia do caos se baseia em um princípio irrefutável: em um mundo de microserviços, nuvem dinâmica e dependências complexas, as falhas são inevitáveis. Componentes de hardware vão parar, a latência da rede vai flutuar de forma imprevisível, discos vão encher, e pacotes de dados vão se corromper. A engenharia do caos aceita essa realidade caótica e, em vez de tentar criar um sistema "à prova de falhas" (uma impossibilidade prática), foca em criar um sistema "à prova de resiliência", que possa degradar-se graciosamente e se recuperar automaticamente quando as falhas inevitáveis ocorrerem.
 
