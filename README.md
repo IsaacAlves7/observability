@@ -19,7 +19,7 @@ Observabilidade e monitoramento são conceitos relacionados, mas têm algumas di
 
 O **monitoramento** é a prática estabelecida há décadas. Ele opera com uma lógica reativa e baseada em checagens pré-definidas. Você, como engenheiro, decide antecipadamente o que é importante e configura ferramentas para vigiar esses pontos específicos: "O servidor está consumindo mais de 90% de CPU?", "A taxa de erro do endpoint de pagamento está acima de 0,1%?", "O disco do banco de dados está com menos de 10% de espaço livre?". São perguntas essenciais, mas conhecidas. O monitoramento é excelente para alertar quando um dos itens da sua lista de preocupações conhecidas sai do esperado. Ele é sobre encontrar respostas para perguntas que você já sabia que precisava fazer. 
 
-Monitorar tudo pode parecer útil, mas às vezes menos é mais.
+> Monitorar tudo pode parecer útil, mas às vezes menos é mais.
 
 <img src="https://em-content.zobj.net/source/microsoft-teams/400/microscope_1f52c.png" align="right" height="77">
 
