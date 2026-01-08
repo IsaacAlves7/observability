@@ -49,9 +49,9 @@ A observabilidade baseia-se em três pilares principais:
 
 A observabilidade é fundamentalmente a intersecção prática entre a ciência de dados e as disciplinas de DevOps e DevSecOps, representando a materialização operacional de princípios científicos aplicados à complexidade dos sistemas distribuídos contemporâneos.
 
-<img height="177" align="right" src="https://github.com/user-attachments/assets/64217819-653f-4a74-86e8-291b1bf3d5ec" />
+<a href="https://medium.com/cloud-native-daily/7-best-tracing-tools-for-microservices-27a5e3bc4b9c"><img height="177" align="right" src="https://github.com/user-attachments/assets/64217819-653f-4a74-86e8-291b1bf3d5ec" /></a>
 
-Entrando mais a fundo no terceiro pilar da observabilidade, o **rastreamento distribuído** (distributed tracing) é um método usado para criar o perfil ou monitorar o resultado de uma solicitação executada em um sistema distribuído. Monitorar um sistema distribuído pode ser desafiador porque cada ponto central individual tem seu próprio fluxo de logs e de métricas. 
+Entrando mais a fundo no terceiro pilar da observabilidade, o **rastreamento distribuído** (<a href="https://javascript.plainenglish.io/9-best-distributed-tracing-tools-for-developers-185e415b7101">distributed tracing</a>) é um método usado para criar o perfil ou monitorar o resultado de uma solicitação executada em um sistema distribuído. Monitorar um sistema distribuído pode ser desafiador porque cada ponto central individual tem seu próprio fluxo de logs e de métricas. 
 
 Para obter uma visão precisa de um sistema distribuído, essas métricas de pontos centrais diferentes precisam ser agregadas em uma visão abrangente. As solicitações para sistemas distribuídos, em geral, não acessam todo o conjunto de pontos centrais dentro do sistema, mas acessam um conjunto parcial ou um caminho através dos pontos centrais. O <a href="https://youtu.be/CqLB-tBYB2Q">rastreamento distribuído</a> ilumina os caminhos acessados com frequência por meio de um sistema distribuído e permite que as equipes analisem e monitorem esses caminhos. O rastreamento distribuído é instalado em cada ponto central do sistema e, em seguida, permite que as equipes consultem o sistema para obter informações sobre a integridade do ponto central e o desempenho da solicitação.
 
