@@ -5,7 +5,7 @@
 # It's a repository of Observability from scratch 🔍
 <img src="https://img.shields.io/badge/Grafana_Stack-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white"> <img src="https://img.shields.io/badge/Datadog-25.3.2-632CA6?style=flat&logo=Datadog&logoColor=white"> <a href="https://www.instagram.com/_eth0_/"><img src="https://img.shields.io/badge/Elastic_Stack-25.3.2-005571?style=flat&logo=Elastic&logoColor=white"></a> <img src="https://img.shields.io/badge/Graylog-25.3.2-FF3633?style=flat&logo=Graylog&logoColor=white"> <img src="https://img.shields.io/badge/NewRelic-25.3.2-1CE783?style=flat&logo=NewRelic&logoColor=white"> 
 
-<img src="https://em-content.zobj.net/source/microsoft-teams/400/magnifying-glass-tilted-left_1f50d.png" align="right" height="77">
+<a href="https://medium.com/@osomudeyazudonu/15-automation-scripts-for-monitoring-and-logging-every-devops-engineer-must-know-e92cd20111fe?source=email-afeafff77325-1737696271889-digest.reader--e92cd20111fe----14-99------------------61b76857_92a7_4fdc_86c4_ad47d198acad-1"><img src="https://em-content.zobj.net/source/microsoft-teams/400/magnifying-glass-tilted-left_1f50d.png" align="right" height="77"></a>
 
 A **observabilidade** (observability) é um conceito fundamental em engenharia de sistemas e DevOps, que se refere à capacidade de entender o que está acontecendo dentro de um sistema complexo através da coleta, agregação e análise de seus dados de desempenho e operação. A ideia central é fornecer visibilidade e insights sobre o estado interno do sistema com base nas saídas externas. 
 
