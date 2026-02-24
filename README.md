@@ -149,6 +149,36 @@ Então, o que você faz para analisar esse erro? Você põe log na sua aplicaç�
 
 - <a href="">Pingdom</a>: é um serviço de monitoramento de desempenho e disponibilidade de sites e aplicações web. Ele ajuda as empresas a garantir que seus sites e serviços estejam sempre disponíveis e operando com desempenho ideal.
 
+Por que o monitoramento do Amazon Prime Video passou de serverless para monolítico? Como isso pode economizar 90% do custo?
+
+O diagrama abaixo mostra a comparação de arquitetura antes e depois da migração:
+
+![unnamed](https://github.com/user-attachments/assets/8c461e1d-f32b-4741-946e-e1e4df23637a)
+
+O que é o Serviço de Monitoramento Amazon Prime Video? O serviço Prime Video precisa monitorar a qualidade de milhares de transmissões ao vivo. A ferramenta de monitoramento analisa automaticamente os fluxos em tempo real e identifica problemas de qualidade como corrupção de blocos, congelamento de vídeo e problemas de sincronização. Esse é um processo importante para a satisfação do cliente.
+
+São 3 etapas: conversor de mídia, detector de defeitos e notificação em tempo real.
+
+Qual é o problema com a arquitetura antiga?
+
+A arquitetura antiga era baseada na Amazon Lambda, que era boa para serviços de construção rapidamente. No entanto, não era econômico ao rodar a arquitetura em grande escala. As duas operações mais caras são:
+
+1. O fluxo de trabalho de orquestração - as funções step da AWS cobram os usuários por transições de estado e a orquestração executa múltiplas transições de estado a cada segundo.
+
+2. Passagem de dados entre componentes distribuídos - os dados intermediários são armazenados no Amazon S3 para que a próxima etapa possa ser baixada. O download pode ser caro quando o volume está alto.
+
+A arquitetura monolítica economiza 90% de custo. Uma arquitetura monolítica é projetada para resolver os problemas de custo. Ainda existem 3 componentes, mas o conversor de mídia e o detector de defeitos são implantados no mesmo processo, economizando o custo de passar dados pela rede. Surpreendentemente, essa abordagem para a mudança na arquitetura de implantação resultou em uma economia de custos de 90%!
+
+Este é um estudo de caso interessante e único, pois os microserviços se tornaram uma escolha de referência e na moda na indústria de tecnologia. É bom ver que estamos tendo mais discussões sobre evoluir a arquitetura e ter discussões mais honestas sobre seus prós e contras. Decompor componentes em microserviços distribuídos tem um custo.
+
+O que os líderes da Amazon disseram sobre isso? 
+
+> CTO da Amazon, Werner Vogels: "Construir sistemas de software evolutivos é uma estratégia, não uma religião. E revisitar suas arquiteturas com mente aberta é obrigatório."
+
+> Ex-vice-presidente de Sustentabilidade da Amazon, Adrian Cockcroft: "A equipe do Prime Video seguiu um caminho que chamo de Serverless First... Eu não defendo o uso apenas de servidores".
+
+A palavra é sua: a arquitetura de microserviços resolve um problema de arquitetura ou um problema organizacional?
+
 Às vezes sua aplicação de site fica lento, podendo ser o CPU, memória ou I/O de disco. Ou seu banco de dados demorar com transações/segundo e o tempo de resposta das queries. Vamos supor que você tenha uma loja online onde para fazer os pagamentos você utiliza um gateway de pagamentos onde o tempo de resposta e a taxa de erros. Outro erro muito comum dentro de um e-commerce é que e se o botão de finalizar compra sumir? Alguém fez um commit em que há remoções acidentais das features. Daí o cenário fica algo bem complexo de monitoramento.
 
 Outro ponto bastante importante é sua métrica de negócios sendo monitorada, ou seja, no caso de um ecommerce a quantidade de vendas sendo feitas. O ideal é você ter um monte de gráficos em tempo real e receber alertas sobre os acontecimentos de erros, sendo alertado pelo email ou pelo canal de chat. Um exemplo: Quando eu tiver um volume de compras abaixo de 100 compras/h você vai receber um alerta. Ou seja, você vai definir parâmetros e o que sair desses parâmetros você vai ser notificado.
