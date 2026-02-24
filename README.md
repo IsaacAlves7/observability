@@ -343,7 +343,7 @@ A execução destes testes segue uma metodologia rigorosa e científica, geralme
 
 Em essência, o teste com Gremlin não é sobre "quebrar o sistema por quebrar", mas sim sobre aprender proativamente com as falhas em um ambiente controlado. É um investimento na confiabilidade do sistema, cujo resultado não é um simples "passou/falhou", mas um relatório detalhado de pontos fracos descobertos, gaps nos procedimentos de resposta a incidentes e oportunidades de melhoria arquitetural. Ele transforma a postura da equipe de reativa para proativa, permitindo que se fortaleçam as defesas do sistema antes que uma falha real e imprevista cause um prejuízo significativo ao negócio.
 
-# 🧠 LLM Observability
+## LLM Observability
 <img src="https://github.com/user-attachments/assets/a8962dc6-9680-4dc8-b79f-410a6d9b2c61" align="right" height="77">
 
 Os grandes modelos de linguagem (LLMs) e plataformas de IA generativa (geração de IA), como IBM watsonx.ai® e uma variedade crescente de variantes de código aberto, estão se consolidando em todos os setores. Devido a esse aumento, tornou-se mais importante do que nunca manter a confiabilidade, segurança e eficiência dos modelos e aplicações após a adoção. Este espaço é onde a observabilidade do LLM se torna essencial.
@@ -354,6 +354,56 @@ Uma boa solução de observabilidade consiste em coletar métricas, rastreamento
 
 <img src="https://github.com/user-attachments/assets/3917b777-7fcb-4267-8d9b-2ea2f17335e5" align="right" height="77">
 
+## CAST Imaging
+![unnamed](https://github.com/user-attachments/assets/4d40c673-af0f-4e56-8fe5-29f3848b5287)
+
+**CAST Imaging** é uma plataforma de Software Intelligence criada pela CAST para fornecer visibilidade profunda e automatizada sobre sistemas de software complexos. Ela foi projetada para ajudar organizações a entender, mapear e analisar aplicações grandes — muitas vezes legadas — sem depender exclusivamente de documentação manual ou do conhecimento tácito de desenvolvedores que já não estão mais na empresa. Em vez de apenas analisar código superficialmente, a ferramenta realiza uma inspeção estrutural do sistema, construindo um modelo interno que representa componentes, dependências, fluxos de dados e interações entre camadas.
+
+Na prática, o CAST Imaging funciona como um “scanner arquitetural” de aplicações. Ele analisa o código-fonte de múltiplas linguagens, identifica como módulos se conectam, detecta chamadas entre serviços, integrações com bancos de dados e até dependências externas. A partir dessa análise estática, a plataforma gera uma representação visual interativa da arquitetura do sistema, permitindo que desenvolvedores e arquitetos naveguem pela aplicação como se estivessem explorando um mapa. Isso facilita a compreensão de sistemas monolíticos extensos, arquiteturas distribuídas ou ambientes híbridos que evoluíram ao longo de anos.
+
+Um dos principais objetivos do CAST Imaging é reduzir risco em iniciativas de modernização, migração para cloud ou refatoração. Em projetos desse tipo, um grande desafio é entender o impacto de alterações em determinadas partes do sistema. A ferramenta permite realizar análises de impacto, mostrando quais componentes serão afetados caso um módulo específico seja modificado. Isso ajuda na tomada de decisão técnica e reduz surpresas em produção. Além disso, ela auxilia na identificação de dívidas técnicas, gargalos arquiteturais e violações de boas práticas estruturais.
+
+Outro ponto relevante é que a plataforma não se limita a métricas superficiais de qualidade de código, como contagem de linhas ou complexidade ciclomática isolada. Ela trabalha com o conceito de inteligência estrutural, avaliando a robustez da arquitetura como um todo. Isso inclui detecção de ciclos de dependência, excesso de acoplamento, violações de camadas arquiteturais e padrões de risco que podem comprometer a escalabilidade ou a manutenibilidade do sistema. Dessa forma, o foco não está apenas em bugs, mas na saúde estrutural da aplicação.
+
+Em termos organizacionais, o CAST Imaging é frequentemente utilizado por grandes empresas que possuem portfólios extensos de aplicações corporativas, especialmente em setores como finanças, telecomunicações, seguros e governo. Nesses ambientes, onde sistemas críticos acumulam décadas de evolução e integrações complexas, a visibilidade arquitetural se torna essencial para governança de TI e planejamento estratégico.
+
+Em essência, o CAST Imaging é uma ferramenta de análise e visualização arquitetural que transforma código-fonte em um modelo navegável e inteligível do sistema, permitindo que equipes compreendam, avaliem riscos e planejem evoluções com base em dados estruturais concretos, em vez de suposições ou documentação desatualizada.
+
+CAST Imaging está muito mais próximo de **observabilidade estrutural de software** do que de Deep Learning.
+
+Ele não é um sistema de aprendizado de máquina que treina modelos neurais para reconhecer padrões como imagens, texto ou voz. Ele trabalha principalmente com **análise estática de código**, engenharia reversa e modelagem estrutural de sistemas. Ou seja, ele “lê” o código-fonte, interpreta dependências, constrói grafos de relacionamento entre componentes e gera uma representação navegável da arquitetura.
+
+Deep Learning, por outro lado, envolve redes neurais profundas, treinamento com grandes volumes de dados e inferência probabilística. O CAST Imaging não está tentando “aprender” padrões a partir de dados históricos para prever algo. Ele está executando análises determinísticas baseadas em regras formais de parsing, semântica de linguagem e modelagem arquitetural.
+
+Se quisermos posicionar conceitualmente:
+
+Deep Learning → foco em aprendizado estatístico a partir de dados.
+CAST Imaging → foco em compreensão estrutural determinística de código.
+
+Ele se aproxima mais de ferramentas como APM avançado, análise arquitetural, mapeamento de dependências e governança de software do que de IA generativa ou modelos neurais.
+
+A palavra “inteligência” no contexto da CAST significa mais “Software Intelligence” — isto é, gerar insights estruturais sobre sistemas — e não “inteligência artificial baseada em redes neurais”.
+
+Então sim, é muito mais observabilidade e engenharia estrutural do que Deep Learning.
+
+Que se você pudesse identificar instantaneamente as únicas 3 funcionalidades para testar a não-regressão após modificar uma classe Java complexa?
+
+E se você pudesse visualizar o efeito cascata, do banco de dados para o front-end, de mudar o tipo de dado de uma coluna?
+
+Domine sua aplicação com a arma suprema dos arquitetos
+
+A imagem CAST mapeia automaticamente o funcionamento interno de qualquer aplicação:
+
+Visualize todas as dependências e explore o acesso ao banco de dados
+
+Rastrear dados de ponta a ponta e fluxos de chamadas, avaliar o impacto das mudanças
+
+Identificar falhas estruturais tipicamente ignoradas pelas ferramentas de qualidade de código
+
+Pare de perder horas incontáveis fazendo engenharia reversa do seu código manualmente.
+Avance mais rápido com o CAST Imaging, a tecnologia automatizada de mapeamento por software.
+
+O CAST Imaging suporta qualquer combinação de Java/JEE, .NET, Python, COBOL, SQL e 100+ outras linguagens, frameworks e motores de banco de dados.
 
 # 🟥 Zabbix
 <img src="https://img.shields.io/badge/Grafana_Stack-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white">
