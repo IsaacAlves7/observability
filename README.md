@@ -385,6 +385,8 @@ A interface da ferramenta, chamada New Relic One, é baseada em uma abordagem "t
 
 Com o avanço da inteligência artificial e a crescente complexidade das aplicações modernas, ferramentas como o New Relic tornaram-se essenciais para dar visibilidade e controle sobre ambientes distribuídos e dinâmicos. Mais do que apenas um sistema de alerta, ele se posiciona como um verdadeiro copiloto técnico para times de engenharia, capaz de reduzir o tempo de resposta a incidentes e orientar melhorias contínuas com base em dados objetivos.
 
+O New Relic Grok facilita para você obter os insights necessários sem precisar entender toneladas de dados de telemetria. Corte o barulho para obter as respostas certas rápida e fácil. O New Relic Grok aproveita os grandes modelos de linguagem (LLMs) da OpenAI para que qualquer engenheiro possa usar linguagem simples e uma interface de chat familiar para fazer perguntas e obter insights, sem qualquer experiência prévia em observabilidade. A observabilidade agora é tão simples quanto perguntar ao New Relic Grok: "Por que meu carrinho não está funcionando?" ou "Instrumente AWS."
+
 # 🟢 UptimeRobot
 <a href=""><img src="" align="right" height="77"></a>
 
