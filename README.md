@@ -407,6 +407,35 @@ Avance mais rápido com o CAST Imaging, a tecnologia automatizada de mapeamento 
 
 O CAST Imaging suporta qualquer combinação de Java/JEE, .NET, Python, COBOL, SQL e 100+ outras linguagens, frameworks e motores de banco de dados.
 
+## SEO e Mecanismos de busca
+Desbloqueie uma busca altamente relevante com IA e insights sobre o uso da busca semântica pela Cococart para impulsionar novas experiências na loja.
+
+Como equipes ágeis podem aproveitar LLMs, bancos de dados vetoriais e amigos para lançar rapidamente experiências de busca semântica de ponta para fama e lucro
+
+![unnamed](https://github.com/user-attachments/assets/91b86ba7-9b10-43da-81a2-09db895f9c9b)
+
+É impressionante como tantas coisas são melhoradas com uma busca excelente. O Google facilitou para pessoas comuns encontrarem tudo o que precisavam online, por mais obscuro que fosse. O fuzzy matching e a busca de símbolos do IntelliJ IDEA ajudaram os programadores a esquecer a estrutura de diretórios de suas bases de código. O AirTag adicionou capacidades avançadas de localização espacial para meu gato. Um recurso de descoberta bem elaborado pode adicionar aquele fator "uau" que produtos icônicos e viciantes têm.
+
+Neste post, abordarei como uma equipe dinâmica pode aproveitar Grandes Modelos de Linguagem (LLMs), Bancos de Dados Vetoriais, Aprendizado de Máquina e outras tecnologias para criar uma experiência de busca e descoberta inspiradora com restrições de orçamento e tempo para startups
+
+Busca Semântica é um método de busca para obter resultados altamente relevantes com base no significado da consulta, contexto e conteúdo. Vai além da simples indexação ou filtragem de palavras-chave. Ele permite que os usuários encontrem as coisas de forma mais natural e com melhor suporte à nuance do que métodos tradicionais de relevância altamente sofisticados, porém rígidos. Na prática, parece a diferença entre perguntar para uma pessoa real ou conversar com uma máquina.
+
+Empresas de tecnologia ao redor do mundo estão correndo para incorporar essas capacidades em seus produtos existentes. A Instacart publicou um artigo extenso sobre como adicionaram a deduplicação semântica à sua experiência de busca. Outras empresas que implementam algum tipo de busca semântica incluem eBay, Shopee, Ikea, Walmart e muitas outras.
+
+<img width="1306" height="797" alt="unnamed" src="https://github.com/user-attachments/assets/ddedbf6d-61eb-47ad-9fac-60b09d6929a1" />
+
+A motivação para adotar a busca semântica é simples: resultados mais relevantes levam a clientes mais satisfeitos e a mais receita. Descoberta, relevância e confiabilidade são alguns dos problemas mais difíceis de resolver no comércio eletrônico. Existe um ecossistema inteiro de soluções para ajudar as empresas a enfrentar esses desafios.
+
+Muitas soluções hoje dependem de embeddings de documentos – representando significado como vetores. Como a busca semântica sozinha pode não fornecer resultados relevantes suficientes, a busca tradicional em texto completo é frequentemente usada para complementar os resuts. Um ciclo de feedback baseado nas interações do usuário (cliques, curtidas, etc.) fornece informações para melhorar continuamente a relevância.
+
+Os principais processos são: indexação, consulta e acompanhamento
+
+![unnamed](https://github.com/user-attachments/assets/240804c3-8ec9-4c10-a59d-178561ce0f1d)
+
+A indexação é feita convertendo o conteúdo de um documento em um vetor de embeddings por meio de um codificador text-para-vetor (por exemplo, a API Embeddings da OpenAI). Os vetores são inseridos em um banco de dados vetorial (por exemplo, Qdrant, Milvus, Pinecone). Modelos de codificação texto-para-vetor, como transformadores de frase, convertem trechos de texto em representações numéricas vetoriais que capturam significado semântico e semelhanças entre textos. Os documentos também são indexados em um mecanismo de busca tradicional em texto completo (por exemplo, Elasticsearch)
+
+![unnamed](https://github.com/user-attachments/assets/a1f64d1d-c691-4f16-b2af-219c0245d2fa)
+
 # 🟥 Zabbix
 <img src="https://img.shields.io/badge/Grafana_Stack-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white">
 
