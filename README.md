@@ -354,6 +354,8 @@ Uma boa solução de observabilidade consiste em coletar métricas, rastreamento
 
 <img src="https://github.com/user-attachments/assets/3917b777-7fcb-4267-8d9b-2ea2f17335e5" align="right" height="77">
 
+O New Relic AIM oferece visibilidade e insights sem precedentes para engenheiros e desenvolvedores que estão modernizando suas pilhas tecnológicas. Com o AIM, as equipes de engenharia podem monitorar, alertar, depurar e causar a raiz de aplicações alimentadas por IA.
+
 ## CAST Imaging
 ![unnamed](https://github.com/user-attachments/assets/4d40c673-af0f-4e56-8fe5-29f3848b5287)
 
