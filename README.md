@@ -437,6 +437,10 @@ Com o avanço da inteligência artificial e a crescente complexidade das aplica�
 
 O New Relic Grok facilita para você obter os insights necessários sem precisar entender toneladas de dados de telemetria. Corte o barulho para obter as respostas certas rápida e fácil. O New Relic Grok aproveita os grandes modelos de linguagem (LLMs) da OpenAI para que qualquer engenheiro possa usar linguagem simples e uma interface de chat familiar para fazer perguntas e obter insights, sem qualquer experiência prévia em observabilidade. A observabilidade agora é tão simples quanto perguntar ao New Relic Grok: "Por que meu carrinho não está funcionando?" ou "Instrumente AWS."
 
+O Teste de Segurança de Aplicações Interativas da Relic (IAST) já está em prévia pública! Engenheiros, equipes de DevOps e segurança agora podem encontrar, corrigir e verificar vulnerabilidades de alto risco cedo e com precisão para construir aplicações mais seguras — e enviar código mais rapidamente.
+
+![unnamed](https://github.com/user-attachments/assets/dc433db8-19e0-4f3e-aa1a-b0e55fe28977)
+
 # 🟢 UptimeRobot
 <a href=""><img src="" align="right" height="77"></a>
 
