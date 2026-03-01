@@ -673,6 +673,54 @@ O **Kibana** é a interface do usuário e a poderosa camada de visualização cu
 
 O **Elastic Beats**, muitas vezes chamado apenas de "Beats," é uma coleção de agentes leves de código aberto desenvolvidos pela Elastic. Cada agente Beat é projetado para uma tarefa específica, como coleta, envio e agregação de dados de diferentes fontes para o Elasticsearch ou para outras saídas, como sistemas de armazenamento ou visualização. Os Beats são projetados para serem simples de configurar, altamente eficientes e escaláveis.
 
+## [Elastic] How DoorDash’s In-House Search Engine Achieved a 50% Drop in Latency
+
+> [!Warning]
+> Aviso: Os detalhes deste post foram derivados dos artigos escritos pela equipe de engenharia da DoorDash. Todo o crédito pelos detalhes técnicos vai para a equipe de engenharia da DoorDash. Os links para os artigos originais estão presentes na seção de referências ao final do post. Alguns detalhes relacionados ao Luceno Apache® foram retirados da documentação oficial do Luceno® Apache. Apache Lucene® é uma marca registrada da The Apache Software Foundation. Tentamos analisar os detalhes e dar nossa opinião sobre eles. Se você encontrar alguma imprecisão ou omissão, por favor, deixe um comentário e faremos o possível para corrigi-las.
+
+Elasticsearch é um mecanismo de busca comprovado e comprovado, utilizado por milhares de empresas.
+
+No entanto, o que funciona em uma escala pode desmoronar em outra. E para uma empresa como a DoorDash, que opera em continentes com um mercado complexo de lojas, itens e logística, as coisas se complicam rapidamente.
+
+No início de 2022, as rachaduras na fundação eram difíceis de ignorar.
+
+Originalmente, a busca global do DoorDash era focada em lojas. Por exemplo, você procuraria por "pizza" e encontraria pizzarias próximas. Essa é uma consulta simples: devolva documentos marcados com pizza, organizados por localização. Mas, com o tempo, as expectativas dos usuários evoluíram. As pessoas queriam procurar itens específicos, o que significava que a busca precisava entender não só onde pedir, mas o que queriam.
+
+Para acomodar essa mudança, o sistema precisava:
+
+- Pesquise em vários tipos de documentos.
+- Gerencie relacionamentos muitos-para-um e entre pais e filhos.
+- Filtre e classifique resultados com base na disponibilidade em tempo real, geolocalização, contexto do usuário e lógica de negócios.
+
+Elasticsearch não foi feito para isso. E embora pudesse ser forçado a cumprir esses requisitos, precisava de muito trabalho da equipe de engenharia.
+
+Por que o Elasticsearch não foi suficiente?
+
+Elasticsearch é uma solução amplamente adotada em empresas modernas. Veja o diagrama abaixo que mostra uma configuração típica do Elasticsearch com Logstash e Kibana:
+
+<img width="1100" height="701" alt="unnamed" src="https://github.com/user-attachments/assets/d76c7582-de4d-455b-ba12-64757ead543b" />
+
+No entanto, para o DoorDash, não foi suficiente por alguns motivos.
+
+No cerne da questão estava o modelo de replicação de documentos do Elasticsearch.
+
+Em teoria, esse modelo garante redundância e resiliência. Na prática, isso introduziu uma carga significativa que dificultava escalar horizontalmente sob a carga de trabalho do DoorDash. Cada documento indexado precisava ser replicado entre nós, o que significava mais I/O de disco, mais conversas de rede e mais sobrecarga de coordenação. Isso se tornou especialmente doloroso à medida que a plataforma cresceu e os volumes de indexação dispararam.
+
+O segundo problema era mais profundo: o Elasticsearch não entende nativamente as relações entre documentos. Ele trata cada documento como uma ilha, o que é aceitável se você estiver pesquisando posts de blog ou arquivos de log. Mas a DoorDash precisava conectar os pontos entre lojas e itens, e essas relações eram fundamentais. Por exemplo, se uma loja sair do ar, seus itens não deveriam aparecer nos resultados de busca.
+
+E então, há o entendimento e o ranqueamento das consultas. O DoorDash precisava de lógica de ranqueamento personalizada, ajustes de relevância movidos por ML e pontuação geo-personalizada. Com o Elasticsearch, tudo isso teve que ficar fora do motor (no código do cliente, pipelines ou sistemas upstream), tornando-o frágil e difícil de desenvolver.
+
+Princípios de Design por Trás da Busca Interna da DoorDash: Para resolver os desafios do Elasticsearch, a DoorDash decidiu criar um mecanismo de busca que pudesse atender aos seus requisitos.
+
+No entanto, a DoorDash não queria reinventar a recuperação de informações do zero.
+
+Em vez disso, construíram um motor focado e de alto desempenho sobre um núcleo já testado em batalha e arquitetaram tudo em torno de flexibilidade, escalabilidade e isolamento.
+
+Apache Luceno® no Núcleo: Apache Lucene® não é um mecanismo de busca. É uma biblioteca de baixo nível para indexação e consulta de texto. Pense nisso como um motor de banco de dados sem o banco de dados: sem gerenciamento de cluster, sem rede, sem APIs.
+
+<img width="1100" height="633" alt="unnamed" src="https://github.com/user-attachments/assets/7402e805-57b5-4e3c-858a-75b30461f4ae" />
+
+
 # ☀️ Grafana Stack
 <img src="https://img.shields.io/badge/Grafana_Stack-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white"> <img src="https://img.shields.io/badge/Grafana-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white"> <img src="https://img.shields.io/badge/Prometheus-25.3.2-E6522C?style=flat&logo=Prometheus&logoColor=white"> <img src="https://img.shields.io/badge/OpenTelemetry-25.3.2-gold?style=flat&logo=OpenTelemetry&logoColor=white">
 
