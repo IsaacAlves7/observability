@@ -718,10 +718,206 @@ No entanto, a DoorDash não queria reinventar a recuperação de informações d
 
 Em vez disso, construíram um motor focado e de alto desempenho sobre um núcleo já testado em batalha e arquitetaram tudo em torno de flexibilidade, escalabilidade e isolamento.
 
-Apache Luceno® no Núcleo: Apache Lucene® não é um mecanismo de busca. É uma biblioteca de baixo nível para indexação e consulta de texto. Pense nisso como um motor de banco de dados sem o banco de dados: sem gerenciamento de cluster, sem rede, sem APIs.
+**Apache Lucene® no Núcleo**: Apache Lucene® não é um mecanismo de busca. É uma biblioteca de baixo nível para indexação e consulta de texto. Pense nisso como um motor de banco de dados sem o banco de dados: sem gerenciamento de cluster, sem rede, sem APIs.
 
 <img width="1100" height="633" alt="unnamed" src="https://github.com/user-attachments/assets/7402e805-57b5-4e3c-858a-75b30461f4ae" />
 
+A DoorDash escolheu a Apache Lucene® por vários motivos:
+
+- É rápido, maduro e amplamente compreendido.
+- Apache Lucene® te dá primitivos para construir exatamente o que você quer.
+- Já é confiável para Elasticsearch e Solr por baixo do capô.
+
+No entanto, Apache Lucene® era apenas a base. A DoorDash envolveu isso em seus serviços opinativos, feitos sob medida para como pensam sobre busca, tráfego, escalabilidade e lógica de negócios. Isso lhes dava controle total sobre desempenho, extensibilidade e custo.
+
+**Da Replicação de Documentos à Replicação de Segmentos**: No Elasticsearch, toda atualização significa replicar documentos completos entre nós. Isso parece bom até você processar milhares de mudanças por segundo.
+
+A DoorDash encontrou um caminho melhor: a replicação de segmentos.
+
+Em vez de duplicar documentos, eles replicam segmentos de índice do Apache Lucene®: as estruturas reais no disco construídas durante a indexação. Isso lhes deu alguns benefícios:
+
+- Otimizar indexação e desempenho em busca
+- Redução do custo de computação, já que o trabalho de indexação ocorre apenas no nó primário, não em todas as réplicas.
+- Aumento do rendimento de indexação
+
+Ao tratar os segmentos como unidade de replicação, o sistema conseguiu reduzir o churn e manter os nós de busca enxutos e estáveis.
+
+**Desacoplamento, Indexação e Busca**: Um padrão comum de falha em sistemas de busca é acoplar os caminhos de escrita e leitura de forma muito apertada. Se a indexação disparar, a busca desacelera. Se as consultas se acumularem, a indexação trava. DoorDash não queria isso.
+
+Então eles dividiram as coisas de forma limpa:
+
+- O Serviço de Indexação constrói segmentos do Apache Lucene® e os grava na Amazon S3. É um serviço não replicado porque escalar horizontalmente o indexador significa aumentar o número de fragmentos de índice, o que pode ser caro.
+- O Serviço de Busca (totalmente replicado) baixa segmentos do S3 e atende consultas.
+
+A recompensa disso foi enorme. Os indexadores escalavam com base na carga de escrita, enquanto os buscadores escalavam com base no tráfego de leitura. Nenhum dos dois conseguiu derrubar o outro.
+
+Componentes Principais do Mecanismo de Busca do DoorDash: O diagrama abaixo mostra a arquitetura de pilha de busca de alto nível implementada pelo DoorDash:
+
+<img width="1100" height="1375" alt="unnamed" src="https://github.com/user-attachments/assets/ab2dbaae-a0e6-428c-87aa-3d28d8b2dd9f" />
+
+Existem quatro componentes principais dentro do Motor de Busca DoorDash. Vamos analisar cada um em detalhes:
+
+1 - O Indexador
+O indexador é a parte do sistema que transforma dados brutos, menus, informações de armazenamento e disponibilidade de itens em segmentos Lucene® que podem ser consultados de forma eficiente. Não atende a nenhuma dúvida. É um pipeline apenas de escrita, enviando segmentos finalizados do Apache Lucene® para a S3, onde os buscadores podem encontrá-los.
+
+Mas nem todos os dados são iguais. Algumas mudanças precisam ser lançadas agora (como uma loja ficando offline). Outros podem esperar (como um novo item do menu adicionado para a próxima semana). DoorDash lida com isso com indexação em dois níveis:
+
+Atualizações de alta prioridade: pense em alternâncias de disponibilidade, fechamento de lojas ou mudanças de preço. Essas atualizações são implementadas imediatamente e são essenciais para a experiência do usuário.
+
+Atualizações em massa: Essas são menos sensíveis ao tempo e processadas durante reconstruções completas programadas do índice, normalmente a cada seis horas.
+
+Essa estratégia equilibra frescor com desempenho. Se tudo fosse indexado imediatamente, poderia sufocar o pipeline. Se tudo fosse lote, os resultados poderiam ficar sem graça. Dividir o caminho permite que o sistema permaneça rápido e preciso.
+
+2 - O Buscador
+Searchers são serviços replicados que baixam segmentos pré-construídos do S3 e os usam para responder às dúvidas dos usuários.
+
+Aqui estão alguns pontos-chave sobre eles:
+
+Os buscadores nunca lidam com tráfego de indexação. Em outras palavras, eles não são impactados pelos picos de escrita.
+
+Escale horizontalmente com base no tráfego de leitura
+
+Pode ser trocado e trocado sem reindexação, já que os segmentos são imutáveis e versionados.
+
+Essa separação de preocupações mantém o sistema estável. Mesmo quando a indexação está ocupada, a busca continua rápida. Quando o tráfego de busca dispara, a indexação permanece no caminho certo.
+
+3 - O Corretor
+Em um sistema de busca distribuído, os resultados vivem em muitos shards. Então, quando alguém busca um termo, o sistema precisa:
+
+Espalhe a consulta para cada fragmento relevante.
+
+Colete e junte os resultados.
+
+Classifique e devolva.
+
+Esse é o trabalho do corretor.
+
+Mas o corretor não encaminha a consulta apenas para o local. Antes de fazer qualquer coisa, ele executa a entrada por um Serviço de Compreensão e Planejamento de Consultas. Isso significa que a entrada bruta do usuário, erros ortográficos, sinônimos e contexto de localização são transformados em uma consulta limpa e semanticamente rica que faz sentido para o motor.
+
+4 - Planejamento e Compreensão de Consultas
+A busca só é tão boa quanto sua consulta. Os usuários nem sempre digitam o que querem dizer. Além disso, diferentes unidades de negócio podem precisar de modelos de classificação ou regras de filtro diferentes.
+
+Em vez de empurrar toda essa lógica para os clientes (o que causaria duplicação, desvio e problemas), o DoorDash centralizou tudo em um serviço de Planejamento e Compreensão de Consultas.
+
+Esta camada:
+
+Reescreve consultas do usuário com base na lógica de negócios, conhecimento de esquemas e contexto do usuário.
+
+Aplica regras e transformações específicas do tipo de índice (item vs. loja).
+
+Codifica estratégias de classificação e lógica computada de campos.
+
+Dessa forma, os clientes não precisam microgerenciar a estrutura da consulta. Eles enviam intenções de alto nível, e o planejador de consultas cuida da complexidade.
+
+Esquema de Índice e Linguagem de Consulta
+Os sistemas de busca tendem a se fragmentar de duas maneiras:
+
+O esquema é rígido demais, então todo novo caso de uso precisa de um truque.
+
+A linguagem de consulta é muito abstrata, então a lógica de negócios acaba enterrada em código de configuração ou cliente ilegível.
+
+A DoorDash enfrentou ambos os problemas de frente. Eles construíram um sistema de esquemas declarativo, expressivo e extensível, que trata a busca não como correspondência de texto, mas como uma recuperação estruturada e contextual de informações.
+
+Configuração de Índice Declarativo
+O primeiro princípio era a separação das preocupações: a lógica de negócio pertence ao esquema, não espalhada entre bases de código. Assim, o DoorDash permite que as equipes definam seu comportamento de busca de forma declarativa, usando três conceitos centrais:
+
+1 - Campos Indexados
+Esses são os ingredientes brutos que são armazenados no índice invertido da Lucene® Apache. Eles podem ser:
+
+Campos de texto: Tokenizados e pontuados com modelos como BM25.
+
+Valores numéricos ou valores de documentação: Usados para filtragem, ordenação ou reforço.
+
+Vetores KNN: Para busca semântica ou correspondência baseada em embedding.
+
+Pontos dimensionais: Úteis para coisas como geobusca ou faixas de preço.
+
+Esses são processados em tempo de indexação: rápido para consulta, estático até reindexação.
+
+2 - Campos Calculados
+Os campos computados são avaliados no momento da consulta, com base em:
+
+A própria consulta
+
+Valores de campo indexados
+
+Outros campos computados
+
+3 - Pipelines de Planejamento de Consultas
+Essa é a cola que conecta a intenção à execução.
+
+Um pipeline de planejamento de consultas pega uma consulta bruta do usuário, frequentemente incompleta, bagunçada ou ambígua, e a transforma em uma consulta de busca estruturada e executável.
+
+Essa lógica fica em um só lugar, não está codificada diretamente nos clientes, então é fácil de versar, atualizar e reutilizar.
+
+Namespaces e Relações
+Você não pode construir um motor de busca real sem modelar relacionamentos.
+
+Na DoorDash, as lojas têm itens, e essa relação é importante. Você não quer itens órfãos aparecendo quando a loja principal estiver fechada. Para modelar isso, o esquema suporta namespaces (classes de documentos fortemente tipadas) e relacionamentos entre eles.
+
+Cada namespace representa um tipo distinto de documento, como armazenar, item e categoria. Esses tipos de documento possuem seus campos, configurações de índice e lógica.
+
+DoorDash suporta dois tipos de relacionamentos entre namespaces, cada um com concessões:
+
+Na junção local, o filho é indexado apenas se o pai o referenciar. Isso é usado quando a flexibilidade importa.
+
+Na junção em blocos, o pai e os filhos são indexados juntos como uma única unidade. Isso é usado ao otimizar para latência, e não há problema em reindexar lotes.
+
+Linguagem de Consulta do Tipo SQL: O DoorDash construiu uma API semelhante a SQL que permite às equipes descrever consultas de forma clara e clara. Esta linguagem suporta:
+
+- Grupos de palavras-chave: Por exemplo, busque por sinônimos, raízes, categorias
+- Restrições do filtro: faixa de preço, raio geográfico, limiar de avaliação
+- Ordenação: Por pontuação, distância, frescura ou qualquer lógica personalizada
+- Operações de entrada e desduplicação: Evite listagens duplicadas ou resultados mal definidos
+- Seleção de campos: Devolver apenas os campos necessários para sistemas a jusante
+
+A linguagem de consulta oferece aos engenheiros uma forma limpa e legível de construir consultas poderosas. Também estabelece um contrato consistente entre as equipes.
+
+Isolamento da Pilha de Busca e Plano de Controle: A maioria dos sistemas compartilhados eventualmente cede sob seu peso, não porque a lógica central falha, mas porque os inquilinos pisam uns nos outros, implantações colidem e desvios de configuração criam bugs sutis e difíceis de depurar.
+
+O DoorDash previu isso e fez uma decisão de design ousada: todo índice recebe sua pilha de busca isolada. Não é a abordagem leve. Mas é uma das mais confiáveis.
+
+Pense em uma pilha de busca como um mecanismo de busca autônomo dentro de uma caixa. Inclui:
+
+Um indexador para construir segmentos Apache Lucene®.
+
+Um ou mais Searchers para atender consultas.
+
+Um corretor que se espalha, agrega e classifica.
+
+Metadados de esquema, configuração e versão que são escopados apenas para esse índice.
+
+Cada pilha está vinculada a um índice e caso de uso específicos, como busca global de itens, descoberta de loja ou busca em campanhas promocionais.
+
+<img width="1100" height="589" alt="unnamed" src="https://github.com/user-attachments/assets/42b96098-4bb9-4ceb-bfc2-55d27e0e33b0" />
+
+Esse projeto traz muita facilidade operacional devido aos seguintes motivos:
+
+- Estabilidade: Se uma configuração ruim de índice ou segmento corrompido derruba uma pilha, as outras permanecem ativas.
+- Flexibilidade: Diferentes equipes podem usar diferentes planejadores de consultas, esquemas, modelos de ranking ou pipelines sem coordenação.
+- Rastreabilidade: Uso de recursos, desempenho de consultas e atraso de indexação podem ser atribuídos à equipe proprietária. Chega de apontar o dedo durante as avaliações de incidentes.
+
+Uma pergunta, porém, permanece: se cada equipe tem sua pilha, como você gerencia lançamentos, mudanças de esquema e novas implantações sem introduzir caos?
+
+É aí que o plano de controle entra. É uma camada de orquestração responsável por:
+
+Lançando novas gerações de uma pilha de busca.
+
+Gerenciando implantações versionadas (código + esquema + config).
+
+Aumentando gradualmente novas instâncias e desativando as antigas.
+
+Conclusão: Reconstruir a infraestrutura central é sempre arriscado e complexo. Então, quando o DoorDash migrou do Elasticsearch, o risco era alto. Mas o resultado valeu a pena.
+
+Aqui estão alguns ganhos que eles alcançaram:
+
+Redução de 50% na latência p99.9. Essa não é a latência média, mas a latência de cauda que tem maior impacto em momentos de alto tráfego. Reduzir pela metade o p99.9 significa menos tempos de espera, experiência do usuário mais suave e menos necessidade de superprovisionamento.
+
+Queda de 75% nos custos de hardware. Ao reduzir computações redundantes, diminuir a sobrecarga de replicação e melhorar o isolamento da carga de trabalho, a DoorDash reduziu drasticamente a pegada de sua infraestrutura de busca.
+
+No fim das contas, a DoorDash não construiu apenas um mecanismo de busca, mas uma plataforma inteira que roda mais rápido, custa menos e se adapta melhor às necessidades futuras.
+
+Nota: Apache Lucene® é uma marca registrada da Apache Software Foundation.
 
 # ☀️ Grafana Stack
 <img src="https://img.shields.io/badge/Grafana_Stack-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white"> <img src="https://img.shields.io/badge/Grafana-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white"> <img src="https://img.shields.io/badge/Prometheus-25.3.2-E6522C?style=flat&logo=Prometheus&logoColor=white"> <img src="https://img.shields.io/badge/OpenTelemetry-25.3.2-gold?style=flat&logo=OpenTelemetry&logoColor=white">
