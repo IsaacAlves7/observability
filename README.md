@@ -297,15 +297,51 @@ No conjunto, todas essas expressões representam uma maturidade operacional muit
 ## Chaos Engineering
 <img src="https://em-content.zobj.net/source/microsoft-teams/400/exploding-head_1f92f.png" align="right" height="77">
 
-A **engenharia do caos** (Chaos Engineering) é uma disciplina rigorosa e proativa que visa revelar as fraquezas e vulnerabilidades ocultas em sistemas distribuídos complexos através da experimentação controlada. 
+A **engenharia do caos** (Chaos Engineering) é uma disciplina rigorosa e proativa que visa revelar as fraquezas e vulnerabilidades ocultas em sistemas distribuídos complexos através da experimentação controlada. Engenharia do caos é uma disciplina onde falhas são intencionalmente introduzidas em um sistema para testar sua resiliência. O objetivo não é causar estragos, mas sim descobrir fraquezas em um ambiente controlado antes que elas se manifestem na produção.
 
-Engenharia do caos é uma disciplina onde falhas são intencionalmente introduzidas em um sistema para testar sua resiliência. O objetivo não é causar estragos, mas sim descobrir fraquezas em um ambiente controlado antes que elas se manifestem na produção.
-
-Ela representa uma mudança de paradigma fundamental: em vez de esperar passivamente que as falhas ocorram naturalmente em produção — com todo o impacto negativo no negócio — as equipes planejam e executam deliberadamente experiências que simulam condições adversas para observar como o sistema responde. O objetivo final não é "quebrar o sistema por quebrar", mas sim construir confiança na capacidade do sistema de suportar condições turbulentas e imprevistas.
+Ela representa uma mudança de paradigma fundamental: em vez de esperar passivamente que as falhas ocorram naturalmente em produção — com todo o impacto negativo no negócio — as equipes planejam e executam deliberadamente experiências que simulam condições adversas para observar como o sistema responde. O objetivo final não é "quebrar o sistema por quebrar", mas sim construir confiança na capacidade do sistema de suportar condições turbulentas e imprevistas (Ordo ab chao).
 
 Ao simular eventos inesperados como falhas de servidores, quedas de rede ou exaustão de recursos, a engenharia do caos ajuda as organizações a entenderem como seus sistemas se comportam sob estresse e como podem se recuperar de forma mais eficiente.
 
 Os testadores desempenham um papel vital nos experimentos de caos, garantindo que sejam bem planejados, controlados, automatizados e conduzam a insights acionáveis. Abaixo estão os papéis-chave que os testadores desempenham na engenharia do caos, com exemplos de Amazon.com
+
+Imagine que estamos no início dos anos 2000, e você é um desenvolvedor com uma ideia ousada. Você quer testar seu software não em um ambiente seguro e controlado, mas exatamente onde a ação está: no ambiente de produção. É aqui que usuários reais interagem com seu sistema. Naquela época, sugerir algo assim poderia te render olhares estranhos dos seus chefes. Mas agora, testar no mundo real não é apenas aceitável; É frequentemente recomendado.
+
+Por que essa grande mudança? Alguns motivos se destacam. Os sistemas de hoje são mais complexos do que nunca, o que nos impulsiona a inovar mais rápido e garantir que nossos serviços sejam confiáveis e fortes. O avanço da tecnologia em nuvem, microserviços e sistemas distribuídos mudou o jogo. Tivemos que adaptar nossos métodos e mentalidades de acordo.
+
+Nosso objetivo agora é criar sistemas que possam lidar com qualquer coisa — seja uma desaceleração ou uma queda total. Entra em cena a Engenharia do Caos.
+
+Nesta edição, mergulhamos no que realmente é engenharia do caos. Vamos analisar seus princípios-chave, como é praticado e exemplos do mundo real. Você vai aprender como causar um pouco de caos controlado pode realmente ajudar a encontrar e corrigir fraquezas antes que se tornem grandes problemas.
+
+Prepare-se para ver como abraçar o caos pode levar a sistemas mais fortes e confiáveis.
+
+Então, o que exatamente é engenharia do caos? É uma forma de lidar com problemas inesperados no desenvolvimento de software e manter os sistemas funcionando. Algumas pessoas podem pensar que um servidor rodando um app vai continuar sem problemas para sempre. Outros acreditam que problemas fazem parte do acordo e que o tempo de inatividade é inevitável.
+
+A engenharia do caos encontra um equilíbrio entre essas visões. Reconhece que as coisas podem dar errado, mas afirma que podemos tomar medidas para evitar que esses problemas impactem nossos sistemas e o desempenho dos nossos aplicativos.
+
+Essa abordagem envolve experimentar em nossos sistemas de produção ao vivo para identificar pontos fracos e áreas que não são tão confiáveis quanto deveriam ser. Trata-se de medir o quanto confiamos na resiliência do nosso sistema e trabalhar para aumentar essa confiança
+
+No entanto, é importante entender que ter 100% de certeza de que nada vai dar errado é irrealista. Por meio da engenharia do caos, introduzimos intencionalmente eventos inesperados para desvendar vulnerabilidades. Esses eventos podem variar bastante, como derrubar um servidor aleatoriamente, interromper um data center ou manipular balanceadores de carga e réplicas de aplicações.
+
+Em resumo, engenharia do caos é sobre projetar experimentos que testem rigorosamente a robustez dos nossos sistemas.
+
+Definindo Engenharia do Caos: Existem muitas formas de descrever a engenharia do caos, mas aqui está uma definição que captura bem sua essência, extraída de https://principlesofchaos.org/.
+
+> "Engenharia do Caos é a disciplina de experimentar em um sistema para construir confiança na capacidade do sistema de resistir a condições turbulentas na produção."
+
+Essa definição destaca o objetivo central da engenharia do caos: garantir que nossos sistemas possam lidar com a natureza imprevisível das operações do mundo real.
+
+Engenharia de Performance vs. Engenharia do Caos: Quando falamos em garantir que nossos sistemas funcionem sem problemas, dois conceitos frequentemente surgem: engenharia de desempenho e engenharia do caos. Vamos discutir o que diferencia esses dois e como eles podem se sobrepor.
+
+Muitos desenvolvedores já estão familiarizados com engenharia de performance, que pertence à mesma família do DevOps. Envolve o uso de uma combinação de ferramentas, processos e tecnologias para monitorar o desempenho do nosso sistema e promover melhorias contínuas. Isso inclui a realização de vários tipos de testes, como testes de carga, estresse e resistência, todos com o objetivo de aumentar o desempenho de nossas aplicações.
+
+Por outro lado, engenharia do caos é sobre quebrar coisas intencionalmente. Sim, isso inclui testes de estresse, mas é mais sobre observar como os sistemas respondem sob estresse inesperado. Testes de estresse podem ser vistos como uma forma de experimento do caos. Então, uma forma de ver é considerar a engenharia de desempenho como um subconjunto da engenharia do caos ou o contrário, dependendo de como você aplica essas práticas.
+
+Outra forma de enxergar esses dois é como disciplinas distintas dentro de uma organização. Uma equipe pode focar exclusivamente em realizar experimentos de caos e aprender com as falhas, enquanto outra pode se dedicar a tarefas de engenharia de desempenho, como testes e monitoramento. Dependendo da estrutura da organização, das habilidades do time e de vários outros fatores, podemos ter equipes separadas para cada disciplina ou uma equipe que enfrenta ambos.
+
+Engenharia do Caos na Prática: Vamos considerar um exemplo para entender melhor a engenharia do caos. Imagine que temos um sistema com um balanceador de carga que direciona as requisições para servidores web. Esses servidores então se conectam a um serviço de pagamento, que, por sua vez, interage com uma API de terceiros e um serviço de cache, todos localizados na Zona de Disponibilidade A. Se o serviço de pagamento falhar em se comunicar com a API de terceiros ou com o cache, as solicitações precisam ser redirecionadas para a Zona de Disponibilidade B para manter alta disponibilidade.
+
+![unnamed](https://github.com/user-attachments/assets/635a84db-cf48-4efa-aec5-3ff06a3b0628)
 
 A filosofia central da engenharia do caos se baseia em um princípio irrefutável: em um mundo de microserviços, nuvem dinâmica e dependências complexas, as falhas são inevitáveis. Componentes de hardware vão parar, a latência da rede vai flutuar de forma imprevisível, discos vão encher, e pacotes de dados vão se corromper. A engenharia do caos aceita essa realidade caótica e, em vez de tentar criar um sistema "à prova de falhas" (uma impossibilidade prática), foca em criar um sistema "à prova de resiliência", que possa degradar-se graciosamente e se recuperar automaticamente quando as falhas inevitáveis ocorrerem.
 
