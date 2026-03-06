@@ -363,6 +363,8 @@ Não confunda, esse Gremlin da engenharia de caos é diferente do Gremlin (lingu
 
 O Gremlin é usado para uma categoria específica e avançada de testes conhecida como **Testes de Caos** ou **Experimentos de Caos**, que fazem parte da disciplina mais ampla do **Chaos Engineering**. Esta abordagem representa uma evolução fundamental em relação aos paradigmas de teste tradicionais, focando não na validação do comportamento correto do sistema sob condições ideais, mas sim na descoberta de suas fraquezas e pontos de falha sob condições anormais e estressantes.
 
+![556629471-2ef59741-bc7a-4a90-9c60-398e5d4be77f](https://github.com/user-attachments/assets/2c1f7937-8a7d-4f4e-bfe3-345f8439c1b5)
+
 Diferente de testes funcionais, de integração ou de carga, que verificam requisitos específicos predefinidos, os testes com Gremlin são **exploratórios e hipotéticos**. Eles partem de perguntas como: "O que acontece se o datacenter principal ficar inacessível?" ou "Como o sistema se comporta se o banco de dados ficar extremamente lento?". Em vez de esperar que essas falhas ocorram naturalmente em produção, com impacto real nos usuários, o Gremlin permite que as equipes simulem essas condições de forma controlada e segura para observar como o sistema responde.
 
 Os principais tipos de experimentos conduzidos com o Gremlin se enquadram em categorias distintas de injeção de falhas:
