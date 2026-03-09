@@ -149,6 +149,24 @@ Então, o que você faz para analisar esse erro? Você põe log na sua aplicaç�
 
 - <a href="">Pingdom</a>: é um serviço de monitoramento de desempenho e disponibilidade de sites e aplicações web. Ele ajuda as empresas a garantir que seus sites e serviços estejam sempre disponíveis e operando com desempenho ideal.
 
+Esta folha de dicas oferece uma comparação concisa, porém abrangente, dos principais elementos de monitoramento entre os três principais provedores de nuvem e ferramentas de código aberto/terceiros:
+
+![unnamed](https://github.com/user-attachments/assets/d58727c3-5b89-40c9-ac83-2504095c6c0a)
+
+Vamos explorar os aspectos essenciais do monitoramento abordados:
+
+1. Coleta de Dados: Colete informações de fontes diversas para aprimorar a tomada de decisões.
+2. Armazenamento de Dados: Armazenar e gerenciar os dados com segurança para análise e referência futuras.
+3. Análise de Dados: Extraia insights valiosos dos dados para impulsionar ações informadas.
+4. Alertas: Receba notificações em tempo real sobre eventos ou anomalias críticas.
+5. Visualização: Apresente dados em um formato visualmente compreensível para melhor compreensão.
+6. Relatórios e Conformidade: Gere relatórios e garanta a conformidade com os padrões regulatórios.
+7. Automação: Otimize processos e tarefas por meio de fluxos de trabalho automatizados.
+8. Integração: Conecte e troque dados de forma fluida entre diferentes sistemas ou ferramentas.
+9. Ciclos de Feedback: Refinar continuamente estratégias com base em feedback e análise de desempenho.
+
+> Com você: como você prioriza e aproveita esses aspectos essenciais de monitoramento em sua área para alcançar melhores resultados e eficiência?
+
 Por que o monitoramento do Amazon Prime Video passou de serverless para monolítico? Como isso pode economizar 90% do custo?
 
 O diagrama abaixo mostra a comparação de arquitetura antes e depois da migração:
