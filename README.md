@@ -492,6 +492,25 @@ A indexação é feita convertendo o conteúdo de um documento em um vetor de em
 
 ![unnamed](https://github.com/user-attachments/assets/a1f64d1d-c691-4f16-b2af-219c0245d2fa)
 
+# SRE (Site Reliability Engineering)
+<img width="1600" height="834" alt="unnamed" src="https://github.com/user-attachments/assets/892eee76-5c04-49f2-a610-05598f7604ee" />
+
+Essa imagem representa **métricas de confiabilidade e operação de sistemas**, muito usadas em **SRE (Site Reliability Engineering)**, **DevOps** e **engenharia de confiabilidade** para medir **falhas, detecção de problemas e tempo de recuperação de sistemas**. Ela mostra o ciclo de funcionamento de um sistema: ele opera normalmente (✔️), ocorre uma falha (❌), o problema é **diagnosticado**, depois **reparado**, o sistema volta a funcionar e eventualmente pode falhar novamente. A linha do tempo abaixo ilustra métricas usadas para medir cada parte desse processo.
+
+A primeira métrica mostrada é o **MTTD (Mean Time To Detect)**. Esse valor mede **quanto tempo leva para detectar que ocorreu uma falha no sistema**. Em ambientes modernos isso depende muito de observabilidade, monitoramento, alertas e logs. Ferramentas como **Prometheus**, **Grafana** e **Elastic Stack** ajudam a reduzir esse tempo porque detectam automaticamente anomalias ou falhas.
+
+Depois aparece o **MTTR (Mean Time To Repair ou Mean Time To Recovery)**. Essa métrica mede **quanto tempo leva para corrigir o problema depois que ele foi identificado**. Esse tempo inclui diagnóstico, correção e restauração do serviço. Em engenharia de confiabilidade, reduzir o MTTR é extremamente importante porque significa restaurar o sistema mais rápido quando ocorre uma falha.
+
+Em seguida aparece o **MTTF (Mean Time To Failure)**. Esse valor representa **quanto tempo um sistema ou componente funciona antes de ocorrer uma falha**. Ele é muito usado quando se fala de confiabilidade de hardware ou software que não é reparado imediatamente, mas também pode ser usado para avaliar a estabilidade de serviços.
+
+Por fim, a imagem mostra o **MTBF (Mean Time Between Failures)**, que é uma métrica clássica de confiabilidade. Ela representa **o tempo médio entre uma falha e a próxima falha do sistema**. Em sistemas reparáveis, o MTBF normalmente inclui o tempo de funcionamento mais o tempo de reparo. Quanto maior o MTBF, mais confiável é o sistema.
+
+Em termos simples, o diagrama mostra **o ciclo de vida de uma falha em sistemas distribuídos** e como cada parte pode ser medida: primeiro o problema acontece, depois alguém precisa detectá-lo (MTTD), então ele é corrigido (MTTR), e o tempo que o sistema permanece funcionando antes de falhar novamente é representado por métricas como MTTF e MTBF.
+
+Essas métricas são extremamente importantes em ambientes de **cloud, microservices e infraestrutura distribuída**, porque ajudam equipes a melhorar **disponibilidade, resiliência e confiabilidade operacional** dos sistemas. Elas também são muito usadas para medir **SLA e SLO** em plataformas modernas.
+
+Se quiser, também posso te explicar **a relação entre MTTR, MTBF e disponibilidade do sistema (uptime)** — existe até uma fórmula simples que arquitetos de sistemas usam para calcular **percentual de disponibilidade**.
+
 # 🟥 Zabbix
 <img src="https://img.shields.io/badge/Grafana_Stack-25.3.2-F46800?style=flat&logo=Grafana&logoColor=white">
 
