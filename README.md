@@ -225,6 +225,26 @@ E qual a melhor plataforma para monitoramento e visualização de logs em aplica
 
 - Nagios: O Nagios é uma das ferramentas mais conhecidas e utilizadas para monitoramento de sistemas, redes e infraestrutura. Ele oferece recursos abrangentes para monitorar a disponibilidade de serviços, a integridade dos dispositivos, o desempenho de redes e outros aspectos críticos de sistemas de TI.
 
+Como detectamos falhas de nós em sistemas distribuídos? O diagrama abaixo mostra os 6 principais mecanismos de detecção de batimentos cardíacos.
+
+![unnamed](https://github.com/user-attachments/assets/64882059-6690-4d42-ba8d-39570cbe575f)
+
+Os mecanismos do batimento cardíaco são cruciais em sistemas distribuídos para monitorar a saúde e o estado de vários componentes. Aqui estão vários tipos de mecanismos de detecção de batimentos cardíacos comumente usados em sistemas distribuídos:
+
+- Batimentos cardíacos baseados em Push A forma mais básica de batimento cardíaco envolve um sinal periódico enviado de um nó para outro ou para um serviço de monitoramento.
+Se os sinais de batimentos cardíacos pararem de chegar dentro de um intervalo especificado, o sistema assume que o nó falhou. Isso é simples de implementar, mas a congestão da rede pode levar a falsos positivos.
+
+- Batimentos cardíacos baseados em puxada Em vez de os nós enviarem batimentos cardíacos ativamente, um monitor central pode periodicamente "puxar" informações de status dos nós.
+Reduz o tráfego de rede, mas pode aumentar a latência na detecção de falhas.
+
+- Batimentos cardíacos com Verificação de Saúde: Inclui informações diagnósticas sobre a saúde do nódulo no sinal do batimento cardíaco. Essas informações podem incluir uso de CPU, uso de memória ou métricas específicas da aplicação. Fornece informações mais detalhadas sobre o nó, permitindo decisões mais nuançadas. No entanto, isso aumenta a complexidade e o potencial para maior overhead de rede.
+
+- Batidas cardíacas com carimbos de tempo Batidas que incluem carimbos de tempo podem ajudar o nó ou serviço receptor a determinar não apenas se um nó está ativo, mas também se há atrasos na rede afetando a comunicação.
+
+- Batimentos cardíacos com reconhecimento: O receptor da mensagem de batimento cardíaco deve enviar um reconhecimento neste modelo. Isso garante que não apenas o remetente esteja vivo, mas que o caminho de rede entre o remetente e o receptor também seja funcional.
+
+- Batimentos cardíacos com quórum: Em alguns sistemas distribuídos, especialmente aqueles que envolvem protocolos de consenso como Paxos ou Raft, é utilizado o conceito de quórum (a maioria dos nós). Batimentos cardíacos podem ser usados para estabelecer ou manter um quórum, garantindo que um número suficiente de nós esteja operacional para que o sistema tome decisões. Isso traz complexidade na implementação e no gerenciamento das mudanças de quórum, à medida que os nós entram ou saem do sistema.
+
 <img height="177" alt="james-web-telescope-3d-icon-png-download-4514240" align="right" src="https://github.com/user-attachments/assets/618add6e-8cde-48f0-bfc7-4d1dec6e1fd5" />
 
 Os **mecanismos de busca** e **SEO** são úteis em observabilidade, isso é um insight extremamente perspicaz e que vai direto ao cerne de um dos maiores desafios na observabilidade moderna. A comparação entre mecanismos de busca e SEO com a prática da observabilidade não é apenas uma analogia interessante; ela representa uma mudança fundamental na forma como equipes precisam pensar sobre seus dados operacionais. A utilidade reside precisamente em abordar o problema do volume massivo de dados e da complexidade inerente aos sistemas distribuídos atuais.
