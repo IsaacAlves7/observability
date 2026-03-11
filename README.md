@@ -483,7 +483,7 @@ Avance mais rápido com o CAST Imaging, a tecnologia automatizada de mapeamento 
 
 O CAST Imaging suporta qualquer combinação de Java/JEE, .NET, Python, COBOL, SQL e 100+ outras linguagens, frameworks e motores de banco de dados.
 
-## SEO e Mecanismos de busca
+## SEO, SRE e Mecanismos de busca
 Desbloqueie uma busca altamente relevante com IA e insights sobre o uso da busca semântica pela Cococart para impulsionar novas experiências na loja.
 
 Como equipes ágeis podem aproveitar LLMs, bancos de dados vetoriais e amigos para lançar rapidamente experiências de busca semântica de ponta para fama e lucro
@@ -511,8 +511,7 @@ Os principais processos são: indexação, consulta e acompanhamento
 A indexação é feita convertendo o conteúdo de um documento em um vetor de embeddings por meio de um codificador text-para-vetor (por exemplo, a API Embeddings da OpenAI). Os vetores são inseridos em um banco de dados vetorial (por exemplo, Qdrant, Milvus, Pinecone). Modelos de codificação texto-para-vetor, como transformadores de frase, convertem trechos de texto em representações numéricas vetoriais que capturam significado semântico e semelhanças entre textos. Os documentos também são indexados em um mecanismo de busca tradicional em texto completo (por exemplo, Elasticsearch)
 
 ![unnamed](https://github.com/user-attachments/assets/a1f64d1d-c691-4f16-b2af-219c0245d2fa)
-
-# SRE (Site Reliability Engineering)
+ 
 <img width="1600" height="834" alt="unnamed" src="https://github.com/user-attachments/assets/892eee76-5c04-49f2-a610-05598f7604ee" />
 
 Essa imagem representa **métricas de confiabilidade e operação de sistemas**, muito usadas em **SRE (Site Reliability Engineering)**, **DevOps** e **engenharia de confiabilidade** para medir **falhas, detecção de problemas e tempo de recuperação de sistemas**. Ela mostra o ciclo de funcionamento de um sistema: ele opera normalmente (✔️), ocorre uma falha (❌), o problema é **diagnosticado**, depois **reparado**, o sistema volta a funcionar e eventualmente pode falhar novamente. A linha do tempo abaixo ilustra métricas usadas para medir cada parte desse processo.
