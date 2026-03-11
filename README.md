@@ -770,6 +770,8 @@ O **Kibana** é a interface do usuário e a poderosa camada de visualização cu
 
 O **Elastic Beats**, muitas vezes chamado apenas de "Beats," é uma coleção de agentes leves de código aberto desenvolvidos pela Elastic. Cada agente Beat é projetado para uma tarefa específica, como coleta, envio e agregação de dados de diferentes fontes para o Elasticsearch ou para outras saídas, como sistemas de armazenamento ou visualização. Os Beats são projetados para serem simples de configurar, altamente eficientes e escaláveis.
 
+![unnamed](https://github.com/user-attachments/assets/623c4dfa-5758-4613-8d8d-6871a7c2a51b)
+
 ## [Elastic] How DoorDash’s In-House Search Engine Achieved a 50% Drop in Latency
 
 > [!Warning]
