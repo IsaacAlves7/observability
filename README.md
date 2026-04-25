@@ -1,3 +1,4 @@
+<img width="656" height="853" alt="unnamed" src="https://github.com/user-attachments/assets/2a3e340d-d3e1-4d3a-aac4-679aac59162a" />
 <a href="https://github.com/IsaacAlves7/observability"><img src="https://github.com/user-attachments/assets/30c91eae-98e9-486d-b383-1ea3b393f553"></a>
 
 > Versículo chave: "Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos." - Provérbios 16:3
@@ -100,6 +101,8 @@ Nas etapas/fases de Operações e Monitoramento: Visão espacial
   - Observabilidade: A observabilidade aqui é fundamental para obter uma visão abrangente do estado do sistema. Utiliza logs, métricas e traços para proporcionar uma compreensão profunda de como o sistema está operando, identificar anomalias, realizar análises de causa raiz e otimizar o desempenho.
 
 Em resumo, enquanto logging e monitoring são utilizados em todas as fases do CI/CD, a observabilidade se torna especialmente crítica na fase de operações e monitoramento, onde a complexidade e a necessidade de insights detalhados sobre o sistema são maiores.
+
+<img width="656" height="853" alt="unnamed" src="https://github.com/user-attachments/assets/9a838911-43b3-4c65-af67-fc3f3a9d81fa" />
 
 No contexto do DevOps, a observabilidade geralmente é considerada uma prática que abrange várias etapas do ciclo de vida do software. Ela envolve a capacidade de compreender o comportamento interno de um sistema com base em suas saídas externas. Isso inclui métricas, registros (logging), rastreamentos (traces) e outras formas de dados que fornecem insights sobre o funcionamento de um sistema. Portanto, logging, monitoring e observabilidade estão presentes em várias etapas do processo de desenvolvimento e implantação de software:
 
