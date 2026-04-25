@@ -705,7 +705,30 @@ Com a difusão, crescimento e expansão desses projetos, a comunidade inseriu um
 
 O **Elasticsearch** é um mecanismo de busca rápido e ampliável que é o coração do Elastic Stack. O Elasticsearch é um mecanismo de busca e análise distribuída altamente escalável. Ele é projetado para indexar, armazenar e recuperar dados de forma eficiente, permitindo buscas rápidas e análises avançadas. O Elasticsearch é frequentemente usado como o mecanismo de armazenamento central para dados de log e outros tipos de dados. 
 
+Top 6 ElasticSearch Use Cases
+Elasticsearch is widely used for its powerful and versatile search capabilities. The diagram below shows the top 6 use cases:
+
 <img width="550" height="715" alt="unnamed" src="https://github.com/user-attachments/assets/eed41e05-7cfa-4da3-b0e3-0b8ab355a75c" />
+
+Full-Text Search
+Elasticsearch excels in full-text search scenarios due to its robust, scalable, and fast search capabilities. It allows users to perform complex queries with near real-time responses.
+
+Real-Time Analytics
+Elasticsearch's ability to perform analytics in real-time makes it suitable for dashboards that track live data, such as user activity, transactions, or sensor outputs.
+
+Machine Learning
+With the addition of the machine learning feature in X-Pack, Elasticsearch can automatically detect anomalies, patterns, and trends in the data.
+
+Geo-Data Applications
+Elasticsearch supports geo-data through geospatial indexing and searching capabilities. This is useful for applications that need to manage and visualize geographical information, such as mapping and location-based services.
+
+Log and Event Data Analysis
+Organizations use Elasticsearch to aggregate, monitor, and analyze logs and event data from various sources. It's a key component of the ELK stack (Elasticsearch, Logstash, Kibana), which is popular for managing system and application logs to identify issues and monitor system health.
+
+Security Information and Event Management (SIEM)
+Elasticsearch can be used as a tool for SIEM, helping organizations to analyze security events in real time.
+
+Over to you: What did we miss?
 
 O **Index Lifecycle Management (ILM)** é um recurso oferecido pelo Elasticsearch, um mecanismo de busca e análise distribuída, que permite gerenciar o ciclo de vida dos índices de dados armazenados no Elasticsearch. É particularmente útil para a gestão de índices de log e outros tipos de dados que têm requisitos específicos de retenção, compactação e arquivamento ao longo do tempo.
 
