@@ -317,6 +317,31 @@ Além da Mux, existem várias outras ferramentas que oferecem analytics para ví
 
 * Wowza — Solução para vídeo online e streaming que menciona analytics tanto para vídeo ao vivo quanto VoD, com foco em qualidade de experiência e engajamento
 
+Top 9 Cases Behind 100% CPU Usage
+The diagram below shows common culprits that can lead to 100% CPU usage. Understanding these can help in diagnosing problems and improving system efficiency.
+
+<img width="550" height="715" alt="unnamed" src="https://github.com/user-attachments/assets/8db9dbc4-4d9c-4093-b183-85b1648368d9" />
+
+Infinite Loops
+
+Background Processes
+
+High Traffic Volume
+
+Resource-Intensive Applications
+
+Insufficient Memory
+
+Concurrent Processes
+
+Busy Waiting
+
+Regular Expression Matching
+
+Malware and Viruses
+
+Over to you: Did we miss anything important?
+
 ## RCA - Root Cause Analysis
 Vivência com análise de causa raiz (RCA), engenharia reversa e resolução de incidentes L2/L3; documentar e participar de RCA, runbooks, sessões shadow e troubleshooting, isso descreve um conjunto de práticas muito típicas de equipes de Suporte Técnico Avançado, SRE, Observabilidade, Operações, Sustentação de Sistemas e Engenharia de Plataforma. É basicamente a expectativa de que a pessoa sabe lidar com problemas complexos em produção, diagnosticar falhas profundas, entender sistemas que ela não construiu e registrar tudo isso para evitar que volte a acontecer.
 
