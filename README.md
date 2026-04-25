@@ -703,7 +703,11 @@ Com a difusão, crescimento e expansão desses projetos, a comunidade inseriu um
 
 <img src="https://user-images.githubusercontent.com/61624336/234415822-3c516b5b-9779-4c6a-bed3-78367f8b3be1.svg" height="77" align="right">
 
-O **Elasticsearch** é um mecanismo de busca rápido e ampliável que é o coração do Elastic Stack. O Elasticsearch é um mecanismo de busca e análise distribuída altamente escalável. Ele é projetado para indexar, armazenar e recuperar dados de forma eficiente, permitindo buscas rápidas e análises avançadas. O Elasticsearch é frequentemente usado como o mecanismo de armazenamento central para dados de log e outros tipos de dados. O **Index Lifecycle Management (ILM)** é um recurso oferecido pelo Elasticsearch, um mecanismo de busca e análise distribuída, que permite gerenciar o ciclo de vida dos índices de dados armazenados no Elasticsearch. É particularmente útil para a gestão de índices de log e outros tipos de dados que têm requisitos específicos de retenção, compactação e arquivamento ao longo do tempo.
+O **Elasticsearch** é um mecanismo de busca rápido e ampliável que é o coração do Elastic Stack. O Elasticsearch é um mecanismo de busca e análise distribuída altamente escalável. Ele é projetado para indexar, armazenar e recuperar dados de forma eficiente, permitindo buscas rápidas e análises avançadas. O Elasticsearch é frequentemente usado como o mecanismo de armazenamento central para dados de log e outros tipos de dados. 
+
+<img width="550" height="715" alt="unnamed" src="https://github.com/user-attachments/assets/eed41e05-7cfa-4da3-b0e3-0b8ab355a75c" />
+
+O **Index Lifecycle Management (ILM)** é um recurso oferecido pelo Elasticsearch, um mecanismo de busca e análise distribuída, que permite gerenciar o ciclo de vida dos índices de dados armazenados no Elasticsearch. É particularmente útil para a gestão de índices de log e outros tipos de dados que têm requisitos específicos de retenção, compactação e arquivamento ao longo do tempo.
 
 O ILM oferece as seguintes funcionalidades:
 
