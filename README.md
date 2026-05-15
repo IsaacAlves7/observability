@@ -1114,6 +1114,8 @@ O OpenTelemetry está rapidamente se tornando o padrão de telemetria de observa
 
 <img src="https://github.com/user-attachments/assets/31458caf-6921-42a6-a8bf-636f587c2f23" align="right" height="77">
 
+<img width="1200" height="630" alt="1_y0NguGb8B61I1N9ncsBLzQ" src="https://github.com/user-attachments/assets/2df45e8d-915d-4d91-a9b2-9b7ec5c2a1c7" />
+
 O **Mimir**, dentro do ecossistema Grafana, é um banco de dados de métricas de longo prazo, open-source e horizontalmente escalável, projetado especificamente para resolver os gargalos de desempenho e operacionais que surgem quando os ambientes de monitoramento baseados em Prometheus crescem para escalas massivas. Ele representa a evolução natural do Prometheus para um contexto empresarial, atuando como uma camada de armazenamento e agregação que permite a centralização de dados de centenas ou mesmo milhares de clusters Prometheus distribuídos, sem sacrificar a performance de consulta ou a confiabilidade.
 
 A motivação fundamental por trás do Mimir é um desafio comum em organizações com infraestruturas complexas: a fragmentação de dados. Em uma arquitetura típica, cada time ou aplicação pode ter seu próprio Prometheus, criando silos de métricas onde é impossível correlacionar eventos entre diferentes domínios. O Mimir quebra esses silos ao oferecer um backend único e unificado para todos os dados de métricas, permitindo consultas globais que abrangem toda a organização. Ele é compatível com a API do Prometheus, o que significa que ferramentas existentes como o Grafana podem se conectar a ele de forma transparente, como se fosse um Prometheus local, mas com a capacidade de acessar um volume de dados ordens de magnitude maior.
@@ -1129,7 +1131,6 @@ Além da escala e economia, o Mimir introduz funcionalidades de nível empresari
 Em essência, o Mimir não é um substituto para o Prometheus, mas sim seu complemento ideal em ambientes de grande escala. Ele permite que as organizações mantenham a simplicidade operacional e o modelo de dados do Prometheus em cada unidade de deploy, enquanto colhe os benefícios de um data lake de métricas corporativo. Ele transforma o monitoramento de uma coleção de instâncias independentes e desconectadas em um sistema nervoso centralizado e unificado para a infraestrutura inteira, permitindo que engenheiros façam perguntas ambiciosas sobre o comportamento de seus sistemas em qualquer escala de tempo, desde segundos até anos, com a mesma facilidade e velocidade. É a materialização da visão de que, na era da nuvem, o monitoramento não deve ser um luxo ou um custo proibitivo, mas uma utilidade pública dentro da organização, tão confiável e escalável quanto a própria plataforma que ela observa.
 
 <img alt="800px-OBS" src="https://github.com/user-attachments/assets/f092945d-cc75-4ec6-a620-599acd6b22fb" />
-
 
 # ⚡ Typesense
 <a href="https://typesense.org/"><img src="https://github.com/user-attachments/assets/c1fd54a2-4353-4067-8844-4802542e59f2" align="right" height="77"></a>
